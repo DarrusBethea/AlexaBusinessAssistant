@@ -13,17 +13,16 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 
-public class MainActivity extends SingleFragmentActivty {
+public class MainListActivity extends SingleFragmentActivty {
 
 
 
     @Override
     protected Fragment createFragment() {
-        // returns new frgament when user clicks on an item from list view
-        return new ProfitsDeleteFragment();
+        return new MainListFragment();
     }
+
 
 
 

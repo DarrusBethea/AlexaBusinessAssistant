@@ -23,7 +23,7 @@ public class Profits {
         return mName;
     }
 
-    public void setmName(String mName) {
+    public  void setmName(String mName) {
         this.mName = mName;
     }
 

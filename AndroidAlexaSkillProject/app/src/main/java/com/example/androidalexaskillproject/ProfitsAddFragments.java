@@ -1,5 +1,7 @@
 package com.example.androidalexaskillproject;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,14 +24,18 @@ public class ProfitsAddFragments extends Fragment {
     private EditText mNameField;
     private EditText mAmountField;
 
-    public void onCreate(Bundle savedInstanceState) {
+
+   public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         mProfits = new Profits();
 
 
     }
 
-    @Override
+
+// TODO FAH 2/24/2020: this fragment will open where the add button clicks click still need to create add button to the toolbar
+   @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_profits_add, container, false);
         // FAH 2/16/2020: if the text if change in the text box then it will be set here
@@ -38,6 +44,7 @@ public class ProfitsAddFragments extends Fragment {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 // This space intentionally left blank
+
             }
 
             @Override
@@ -78,15 +85,7 @@ public class ProfitsAddFragments extends Fragment {
                 startActivity(intentClick);
             }
         });
-        // FAH 2/16/2020 if add button is press uses custom url to delete what we want
-        Button delbtn = v.findViewById(R.id.delete_btn);
-        delbtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbyqn1fD46kgkDbscsaJ61pTG9ln9lKqE4pS9ZzaLCe2oVILr_Wg/exec?sheetname=profits&AddDelete=delete&name="+mProfits.getmName() +"&profit="+mProfits.getmAmount()));
 
-                startActivity(intentClick);
-            }
-        });
 
         return v;
     }
