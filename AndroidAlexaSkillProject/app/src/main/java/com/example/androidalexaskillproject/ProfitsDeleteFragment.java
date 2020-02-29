@@ -16,9 +16,13 @@ import androidx.fragment.app.Fragment;
 public class ProfitsDeleteFragment extends Fragment {
     private String DeleteName;
     private String DeleteAmount;
+    private String DeleteLastName;
+    private String DeleteDate;
     private Profits mProfits;
     private EditText mNameField;
     private EditText mAmountField;
+    private EditText mLastNameField;
+    private EditText mDatetField;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +31,9 @@ public class ProfitsDeleteFragment extends Fragment {
         //bassically it will auto fill when a user clicks on something from the list to delete
 
         DeleteName = getActivity().getIntent().getStringExtra("delete_name");
+        DeleteLastName = getActivity().getIntent().getStringExtra("delete_last_name");
         DeleteAmount = getActivity().getIntent().getStringExtra("delete_amount");
+        DeleteDate = getActivity().getIntent().getStringExtra("delete_date");
 
 
     }
@@ -41,17 +47,31 @@ public class ProfitsDeleteFragment extends Fragment {
         mNameField.setText(DeleteName);
         mProfits.setmName(DeleteName);
 
+
+        mLastNameField = v.findViewById(R.id.profit_lastname_delete);
+        mLastNameField.setEnabled(false);
+        mLastNameField.setText(DeleteLastName);
+        mProfits.setmLastname(DeleteLastName);
+
         mAmountField = v.findViewById(R.id.profit_amount_delete);
         mAmountField.setEnabled(false);
         mAmountField.setText(DeleteAmount);
         mProfits.setmAmount(DeleteAmount);
 
 
+        mDatetField = v.findViewById(R.id.profit_date_delete);
+        mDatetField.setEnabled(false);
+        mDatetField.setText(DeleteDate);
+        mProfits.setmDate(DeleteDate);
+
+
         // FAH 2/16/2020 if add button is press uses custom url to delete what we want
         Button delbtn = v.findViewById(R.id.delete_btn);
         delbtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbyqn1fD46kgkDbscsaJ61pTG9ln9lKqE4pS9ZzaLCe2oVILr_Wg/exec?sheetname=profits&AddDelete=delete&name="+mProfits.getmName() +"&profit="+mProfits.getmAmount()));
+                Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbyqn1fD46kgkDbscsaJ61pTG9ln9lKqE4pS9ZzaLCe2oVILr_Wg/exec?sheetname=profits&AddDelete=delete&Firstname=" + mProfits.getmName() + "&LastName=" + mProfits.getmLastname()
+                        +"&profit=" + mProfits.getmAmount() +"&Date=" + mProfits.getmDate()));
+
 
                 startActivity(intentClick);
             }

@@ -62,6 +62,8 @@ public class MainListFragment extends Fragment {
 
         private TextView mNameProfits;
         private TextView MValueProfits;
+        private TextView mLastnameProfits;
+        private TextView mDateProfits;
 
         private Profits mProfit;
 
@@ -70,6 +72,8 @@ public class MainListFragment extends Fragment {
             itemView.setOnClickListener(this);
             mNameProfits = itemView.findViewById(R.id.name_list);
             MValueProfits = itemView.findViewById(R.id.profit_list);
+            mLastnameProfits = itemView.findViewById(R.id.list_profits_lastname);
+            mDateProfits = itemView.findViewById(R.id.list_profit_date);
 
 
         }
@@ -78,6 +82,8 @@ public class MainListFragment extends Fragment {
             mProfit = profit;
             mNameProfits.setText(mProfit.getmName());
             MValueProfits.setText(mProfit.getmAmount());
+            mLastnameProfits.setText(mProfit.getmLastname());
+            mDateProfits.setText(mProfit.getmDate());
 
         }
 
@@ -85,7 +91,9 @@ public class MainListFragment extends Fragment {
         public void onClick(View view) {
             Intent intent = new Intent(getActivity(), MainActivity.class);
             intent.putExtra("delete_name",mProfit.getmName() );
+            intent.putExtra("delete_last_name",mProfit.getmLastname() );
             intent.putExtra("delete_amount",mProfit.getmAmount() );
+            intent.putExtra("delete_date",mProfit.getmDate() );
             startActivity(intent);
 
         }

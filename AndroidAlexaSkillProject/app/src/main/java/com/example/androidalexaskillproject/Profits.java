@@ -6,8 +6,26 @@ import java.util.UUID;
 public class Profits {
 
     private String mName;
-    private Date mDate;
     private String mAmount;
+
+    public String getmDate() {
+        return mDate;
+    }
+
+    public void setmDate(String mDate) {
+        this.mDate = mDate;
+    }
+
+    public String getmLastname() {
+        return mLastname;
+    }
+
+    public void setmLastname(String mLastname) {
+        this.mLastname = mLastname;
+    }
+
+    private String mDate;
+    private String mLastname;
 
 
     public String getmAmount() {
@@ -33,5 +51,5 @@ public class Profits {
 
     public Profits()
     {
-        mDate = new Date();    }
+            }
 }

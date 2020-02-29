@@ -23,6 +23,8 @@ public class ProfitsAddFragments extends Fragment {
     private Profits mProfits;
     private EditText mNameField;
     private EditText mAmountField;
+    private EditText mLastNameField;
+    private EditText mDateField;
 
 
    public void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,26 @@ public class ProfitsAddFragments extends Fragment {
             }
         });
 
+
+       mLastNameField = v.findViewById(R.id.profit_last_name_add);
+       mLastNameField.addTextChangedListener(new TextWatcher() {
+           @Override
+           public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+               // This space intentionally left blank
+
+           }
+
+           @Override
+           public void onTextChanged(CharSequence s, int start, int before, int count) {
+               mProfits.setmLastname(s.toString());
+           }
+
+           @Override
+           public void afterTextChanged(Editable s) {
+               // This one too
+           }
+       });
+
         mAmountField = v.findViewById(R.id.profit_amount);
         mAmountField.addTextChangedListener(new TextWatcher() {
             @Override
@@ -75,12 +97,33 @@ public class ProfitsAddFragments extends Fragment {
                 // This one too
             }
         });
+
+       mDateField = v.findViewById(R.id.profit_date_add);
+       mDateField.addTextChangedListener(new TextWatcher() {
+           @Override
+           public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+               // This space intentionally left blank
+
+           }
+
+           @Override
+           public void onTextChanged(CharSequence s, int start, int before, int count) {
+               mProfits.setmDate(s.toString());
+           }
+
+           @Override
+           public void afterTextChanged(Editable s) {
+               // This one too
+           }
+       });
+
         // FAH 2/16/2020 if add button is press uses custom url to add what we want
         // code for url adding can be found in the google app script editor
         Button addbtn = v.findViewById(R.id.profit_sumbit_btn);
         addbtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbyqn1fD46kgkDbscsaJ61pTG9ln9lKqE4pS9ZzaLCe2oVILr_Wg/exec?sheetname=profits&AddDelete=add&name="+mProfits.getmName() +"&profit="+mProfits.getmAmount()));
+                Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbyqn1fD46kgkDbscsaJ61pTG9ln9lKqE4pS9ZzaLCe2oVILr_Wg/exec?sheetname=profits&AddDelete=add&Firstname=" + mProfits.getmName() + "&LastName=" + mProfits.getmLastname()
+                        +"&profit=" + mProfits.getmAmount() +"&Date=" + mProfits.getmDate()));
 
                 startActivity(intentClick);
             }
