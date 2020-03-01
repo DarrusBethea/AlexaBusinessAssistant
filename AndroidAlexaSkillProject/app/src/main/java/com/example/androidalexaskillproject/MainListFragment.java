@@ -3,6 +3,7 @@ package com.example.androidalexaskillproject;
 import android.content.Context;
 import android.content.Intent;
 import android.icu.util.ULocale;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageSwitcher;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,17 +33,27 @@ public class MainListFragment extends Fragment {
     private RecyclerView mProfitRecyclerView;
     private MainAdapter mAdapter;
 
+
+    // public ImageView mDeleteImage;
+
+
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+
+
         View view = inflater.inflate(R.layout.main_list_fragment, container, false);
+
         mProfitRecyclerView = view.findViewById(R.id.profits_recycler_view);
         mProfitRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
         updateUI();
         return view;
     }
 
     private void updateUI() {
+
         try {
             new ListInfo.GetData().execute().get();
         } catch (ExecutionException e) {
@@ -48,10 +61,14 @@ public class MainListFragment extends Fragment {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        ListInfo listinfo = ListInfo.get(getActivity());
+        ListInfo  listinfo = ListInfo.get(getActivity());
 
 
         List<Profits> profits = listinfo.getInfo();
+        for(int i = 0; i < profits.size(); i++){
+            System.out.println(profits.get(i).getmAmount());
+
+        }
         mAdapter = new MainAdapter(profits);
         mProfitRecyclerView.setAdapter(mAdapter);
     }
@@ -59,7 +76,9 @@ public class MainListFragment extends Fragment {
     private class Viewholder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
 
-
+        public ImageView mAddImage;
+        public ImageView mEditImage;
+        public ImageView mDeleteImage;
         private TextView mNameProfits;
         private TextView MValueProfits;
         private TextView mLastnameProfits;
@@ -74,6 +93,9 @@ public class MainListFragment extends Fragment {
             MValueProfits = itemView.findViewById(R.id.profit_list);
             mLastnameProfits = itemView.findViewById(R.id.list_profits_lastname);
             mDateProfits = itemView.findViewById(R.id.list_profit_date);
+            mDeleteImage = itemView.findViewById(R.id.profit_image_delete_list);
+            mAddImage = itemView.findViewById(R.id.profit_image_add_list);
+            mEditImage = itemView.findViewById(R.id.profit_image_edit_list);
 
 
         }
@@ -88,23 +110,28 @@ public class MainListFragment extends Fragment {
         }
 
         @Override
-        public void onClick(View view) {
-            Intent intent = new Intent(getActivity(), MainActivity.class);
-            intent.putExtra("delete_name",mProfit.getmName() );
-            intent.putExtra("delete_last_name",mProfit.getmLastname() );
-            intent.putExtra("delete_amount",mProfit.getmAmount() );
-            intent.putExtra("delete_date",mProfit.getmDate() );
-            startActivity(intent);
+        public void onClick(View v) {
 
         }
+
+
+
+
     }
+
+
 
     private class MainAdapter extends RecyclerView.Adapter<Viewholder> {
         private List<Profits> mProfts;
 
+
+
         public MainAdapter(List<Profits> _profits) {
             mProfts = _profits;
         }
+
+
+
 
         @Override
         public Viewholder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -115,8 +142,43 @@ public class MainListFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(Viewholder holder, int position) {
-            Profits profit = mProfts.get(position);
+            final Profits profit = mProfts.get(position);
             holder.bind(profit);
+
+
+            holder.mDeleteImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(), MainActivity.class);
+                    intent.putExtra("delete_name",profit.getmName() );
+                    intent.putExtra("delete_last_name",profit.getmLastname() );
+                    intent.putExtra("delete_amount",profit.getmAmount() );
+                    intent.putExtra("delete_date",profit.getmDate());
+                    startActivity(intent);
+                }
+            });
+
+            holder.mAddImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(), ProfitReturnAddFragment.class);
+
+                    startActivity(intent);
+                }
+            });
+
+            holder.mEditImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(), ProfitReturnEditFragment.class);
+                    intent.putExtra("edit_name",profit.getmName() );
+                    intent.putExtra("edit_last_name",profit.getmLastname() );
+                    intent.putExtra("edit_amount",profit.getmAmount() );
+                    intent.putExtra("edit_date",profit.getmDate());
+                    startActivity(intent);
+
+                }
+            });
 
         }
 

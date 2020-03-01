@@ -1,6 +1,7 @@
 package com.example.androidalexaskillproject;
 
 import android.content.Context;
+import android.net.http.HttpResponseCache;
 import android.os.AsyncTask;
 
 import java.io.BufferedInputStream;
@@ -19,7 +20,7 @@ public class ListInfo {
 
     // FAH 2/22/2020: this list is where we will store the sheet data
     public static ArrayList<String> InfoListView = new ArrayList<>();
-
+public static  int counter = 0;
     private static ListInfo sListInfo;
     private List<Profits> mProfits;
 
@@ -31,7 +32,6 @@ public class ListInfo {
             Profits _profits = new Profits();
             //FAH2/23/2020: getting the sheet info this will update the ui list
             String line = InfoListView.get(i);
-
             //FAH2/23/2020: spliting the list by a "
             String[] splitted = line.split("\"");
             String[] Datesplitted = splitted[13].split(":") ;
@@ -54,7 +54,6 @@ public class ListInfo {
         if (sListInfo == null) {
             sListInfo = new ListInfo(context);
         }
-
         return sListInfo;
     }
 
@@ -72,6 +71,13 @@ public class ListInfo {
         protected String doInBackground(String... params) {
             HttpURLConnection urlConnection = null;
             String result = "";
+            HttpResponseCache cache = HttpResponseCache.getInstalled();
+            while (cache != null){
+                cache.flush();
+
+            }
+
+
             try {
                 URL url = new URL(
                         "https://script.google.com/macros/s/AKfycbzRJecRXqinxLQxHRix6F3JmjHso5NyxNgXABdWrDIhwjM4UvY/exec?id=1KE91K1eYxlfSV9gHfI1LBNaCtAS_c-o8rTF92NlEWvg&sheet=profits");
@@ -82,22 +88,31 @@ public class ListInfo {
                 if (code == 200) {
                     InputStream in = new BufferedInputStream(urlConnection.getInputStream());
                     if (in != null) {
+
                         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(in));
                         String line = "";
 
                         while ((line = bufferedReader.readLine()) != null)
                             result += line;
+                        System.out.println(result);
                     }
                     in.close();
                 }
+
+                //FAH2/29/2020: clearing the list good for when the list needs to update
+                InfoListView.clear();
                 //FAH 2/23/2020 when called method will wait to finsih
                 //good for adding in the data to the arraylist real quick
-
                 String[] separated = result.split("\\{");
                 for (int i = 2; i < separated.length; i++) {
                     InfoListView.add(separated[i].replaceAll("\\},", "").replaceAll("\\}\\]\\}", ""));
+
+
+
                 }
 
+                // FAH 2/29/2020: empty the list so it will refresh the UI
+                sListInfo = null;
                 return result;
             } catch (MalformedURLException e) {
                 e.printStackTrace();
@@ -105,6 +120,9 @@ public class ListInfo {
                 e.printStackTrace();
             } finally {
                 urlConnection.disconnect();
+            }
+            if (cache != null) {
+                cache.flush();
             }
 
             return result;
