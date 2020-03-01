@@ -2,6 +2,8 @@ package com.example.androidalexaskillproject;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.net.http.HttpResponseCache;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,6 +14,18 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.ExecutionException;
 
 public class ProfitsDeleteFragment extends Fragment {
     private String DeleteName;
@@ -24,6 +38,9 @@ public class ProfitsDeleteFragment extends Fragment {
     private EditText mLastNameField;
     private EditText mDatetField;
 
+
+
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mProfits = new Profits();
@@ -34,8 +51,6 @@ public class ProfitsDeleteFragment extends Fragment {
         DeleteLastName = getActivity().getIntent().getStringExtra("delete_last_name");
         DeleteAmount = getActivity().getIntent().getStringExtra("delete_amount");
         DeleteDate = getActivity().getIntent().getStringExtra("delete_date");
-
-
     }
 
     @Override
@@ -69,15 +84,65 @@ public class ProfitsDeleteFragment extends Fragment {
         Button delbtn = v.findViewById(R.id.delete_btn);
         delbtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbyqn1fD46kgkDbscsaJ61pTG9ln9lKqE4pS9ZzaLCe2oVILr_Wg/exec?sheetname=profits&AddDelete=delete&Firstname=" + mProfits.getmName() + "&LastName=" + mProfits.getmLastname()
-                        +"&profit=" + mProfits.getmAmount() +"&Date=" + mProfits.getmDate()));
 
+                try {
+                    new ProfitsDeleteFragment.DeleteData().execute().get();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
 
-                startActivity(intentClick);
             }
         });
 
+
+
+
         return v;
+    }
+
+    // FAH2/29/2020: done with fragment then return back to list
+    public void ReturnList(){
+        Intent GoBackintent = new Intent(getActivity(), MainListActivity.class);
+        startActivity(GoBackintent);
+
+    };
+
+
+
+
+    public  class DeleteData extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            HttpURLConnection urlConnection = null;
+            String result = "";
+            HttpResponseCache cache = HttpResponseCache.getInstalled();
+            if (cache != null){
+                cache.flush();
+
+            }
+
+            // FAH 2/29/2020:  Timer so we can update the sheet and then list will be able to read newly updated sheet
+            new Timer().schedule(new TimerTask()
+            {
+                @Override
+                public void run()
+                {
+                    ReturnList();
+
+                }
+            }, 4000 );
+            Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbyqn1fD46kgkDbscsaJ61pTG9ln9lKqE4pS9ZzaLCe2oVILr_Wg/exec?sheetname=profits&AddDelete=delete&Firstname=" + mProfits.getmName() + "&LastName=" + mProfits.getmLastname()
+                    +"&profit=" + mProfits.getmAmount() +"&Date=" + mProfits.getmDate()));
+            startActivity(intentClick);
+
+            return "";
+
+        }
+
+
     }
 
 

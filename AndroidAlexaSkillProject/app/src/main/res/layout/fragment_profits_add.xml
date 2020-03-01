@@ -8,7 +8,7 @@
 
 
     <Button
-        android:id="@+id/profit_sumbit_btn"
+        android:id="@+id/profit_add_btn"
         android:layout_width="122dp"
         android:layout_height="45dp"
         android:text="add"
@@ -21,7 +21,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/profit_name"
+        android:id="@+id/profit_add_Firstname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -66,7 +66,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/profit_amount"
+        android:id="@+id/profit_amount_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

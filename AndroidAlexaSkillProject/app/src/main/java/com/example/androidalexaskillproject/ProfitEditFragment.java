@@ -20,31 +20,73 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.ExecutionException;
 
-// FAH 2/16/202: this class is  mainly for the add profts fragment
-public class ProfitsAddFragments extends Fragment {
-    private Profits mProfits;
-    private EditText mNameField;
-    private EditText mAmountField;
-    private EditText mLastNameField;
-    private EditText mDateField;
 
+// FAH 3/1/2020: edit class
+public class ProfitEditFragment extends Fragment {
+    private Profits mProfits;
+    private EditText mEditNameField;
+    private EditText mEditAmountField;
+    private EditText mEditLastNameField;
+    private EditText mEditDateField;
+
+    private String OldFirsteName;
+    private String OldAmount;
+    private String OldLastName;
+    private String OldDate;
+
+    private EditText mOldEditNameField;
+    private EditText mOldEditAmountField;
+    private EditText mOldEditLastNameField;
+    private EditText mOldEditDateField;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         mProfits = new Profits();
 
+        //FAH 3/1/2020: retriving the old data
+        OldFirsteName = getActivity().getIntent().getStringExtra("edit_name");
+        OldAmount = getActivity().getIntent().getStringExtra("edit_amount");
+        OldLastName = getActivity().getIntent().getStringExtra("edit_last_name");
+        OldDate = getActivity().getIntent().getStringExtra("edit_date");
+
 
     }
 
 
-    // TODO FAH 2/24/2020: this fragment will open where the add button clicks click still need to create add button to the toolbar
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_profits_add, container, false);
+
+
+
+
+
+        View v = inflater.inflate(R.layout.fragment_profits_edit, container, false);
+
+
+        //FAH 3/1/2020: getting the old data
+        mOldEditNameField = v.findViewById(R.id.profit_edit_Firstname_old);
+        mOldEditNameField.setEnabled(false);
+        mOldEditNameField.setText(OldFirsteName);
+
+
+        mOldEditLastNameField = v.findViewById(R.id.profit_lastname_edit_old);
+        mOldEditLastNameField.setEnabled(false);
+        mOldEditLastNameField.setText(OldLastName);
+
+        mOldEditAmountField = v.findViewById(R.id.profit__amount_edit_old);
+        mOldEditAmountField.setEnabled(false);
+        mOldEditAmountField.setText(OldAmount);
+
+        mOldEditDateField = v.findViewById(R.id.profit_date_edit_old);
+        mOldEditDateField.setEnabled(false);
+        mOldEditDateField.setText(OldDate);
+
+
         // FAH 2/16/2020: if the text if change in the text box then it will be set here
-        mNameField = v.findViewById(R.id.profit_add_Firstname);
-        mNameField.addTextChangedListener(new TextWatcher() {
+        mEditNameField = v.findViewById(R.id.profit_edit_Firstname);
+        mEditNameField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 // This space intentionally left blank
@@ -63,8 +105,8 @@ public class ProfitsAddFragments extends Fragment {
         });
 
 
-        mLastNameField = v.findViewById(R.id.profit_last_name_add);
-        mLastNameField.addTextChangedListener(new TextWatcher() {
+        mEditLastNameField = v.findViewById(R.id.profit_last_name_edit);
+        mEditLastNameField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 // This space intentionally left blank
@@ -82,8 +124,8 @@ public class ProfitsAddFragments extends Fragment {
             }
         });
 
-        mAmountField = v.findViewById(R.id.profit_amount_add);
-        mAmountField.addTextChangedListener(new TextWatcher() {
+        mEditAmountField = v.findViewById(R.id.profit_amount_edit);
+        mEditAmountField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 // This space intentionally left blank
@@ -100,8 +142,8 @@ public class ProfitsAddFragments extends Fragment {
             }
         });
 
-        mDateField = v.findViewById(R.id.profit_date_add);
-        mDateField.addTextChangedListener(new TextWatcher() {
+        mEditDateField = v.findViewById(R.id.profit_date_edit);
+        mEditDateField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 // This space intentionally left blank
@@ -121,13 +163,13 @@ public class ProfitsAddFragments extends Fragment {
 
         // FAH 2/16/2020 if add button is press uses custom url to add what we want
         // code for url adding can be found in the google app script editor
-        Button addbtn = v.findViewById(R.id.profit_add_btn);
+        Button addbtn = v.findViewById(R.id.profit_edit_btn);
         addbtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
 
                 try {
-                    new ProfitsAddFragments.AddeData().execute().get();
+                    new ProfitEditFragment.EditData().execute().get();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } catch (ExecutionException e) {
@@ -149,7 +191,7 @@ public class ProfitsAddFragments extends Fragment {
 
 
 
-    public class AddeData extends AsyncTask<String, Void, String> {
+    public class EditData extends AsyncTask<String, Void, String> {
 
         @Override
         protected String doInBackground(String... params) {
@@ -169,8 +211,10 @@ public class ProfitsAddFragments extends Fragment {
 
                 }
             }, 4000);
-            Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbyqn1fD46kgkDbscsaJ61pTG9ln9lKqE4pS9ZzaLCe2oVILr_Wg/exec?sheetname=profits&AddDelete=add&Firstname=" + mProfits.getmName() + "&LastName=" + mProfits.getmLastname()
-                    + "&profit=" + mProfits.getmAmount() + "&Date=" + mProfits.getmDate()));
+            Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbwI9wvauddFIGMMUNrqqtb5aXXURM3_Jo468jxTsWGe/dev?sheetname=profits&AddDelete=edit&Firstname="+
+                    OldFirsteName.toString() +"&LastName=" + OldLastName.toString() + "&profit=" + OldAmount.toString() +
+                    "&Date=" + OldDate.toString() + "&EditFirstName="+ mProfits.getmName()+
+                    "&EditLastName=" + mProfits.getmLastname() +  "&EditProfit=" + mProfits.getmAmount()+"&EditDate=" + mProfits.getmDate()));
             startActivity(intentClick);
 
             return "";

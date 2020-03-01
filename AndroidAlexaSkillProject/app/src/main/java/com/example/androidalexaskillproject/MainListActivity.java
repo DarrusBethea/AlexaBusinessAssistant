@@ -1,5 +1,6 @@
 package com.example.androidalexaskillproject;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 
 import androidx.fragment.app.Fragment;
@@ -17,9 +18,15 @@ import java.util.ArrayList;
 public class MainListActivity extends SingleFragmentActivty {
 
 
+    //   finish();
+    //  overridePendingTransition(0, 0);
+
+
 
     @Override
     protected Fragment createFragment() {
+
+
         return new MainListFragment();
     }
 
