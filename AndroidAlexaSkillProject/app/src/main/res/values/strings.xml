@@ -1,3 +1,17 @@
+<<<<<<< HEAD
 <resources>
     <string name="app_name">AndroidAlexaSkillProject</string>
 </resources>
+=======
+<resources>
+    <string name="app_name">AndroidAlexaSkillProject</string>
+
+    <string-array name="names">
+        <item> home</item>
+        <item> work</item>
+        <item> other</item>
+        <item> custom</item>
+
+    </string-array>
+</resources>
+>>>>>>> Mayank

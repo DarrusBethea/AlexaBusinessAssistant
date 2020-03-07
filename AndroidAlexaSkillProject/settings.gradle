@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 include ':app'
 rootProject.name='AndroidAlexaSkillProject'
+=======
+include ':app'
+rootProject.name='AndroidAlexaSkillProject'
+>>>>>>> Mayank
