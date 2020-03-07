@@ -25,6 +25,12 @@
         <activity android:name=".ProfitReturnEditFragment">
         </activity>
 
+        <activity android:name=".PieChartReturnFragment">
+        </activity>
+
+        <activity android:name=".BarChartReturnFragment">
+        </activity>
+
     </application>
 
 </manifest>

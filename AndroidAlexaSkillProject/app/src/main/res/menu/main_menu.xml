@@ -17,5 +17,23 @@
         </menu>menu>
     </item>
 
+    <item android:id="@+id/select_stats"
+        android:icon="@drawable/ic_business"
+        android:title=" Item 1"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item android:id="@+id/Pie_chart"
+                android:title="Pie Chart"/>
+
+            <item android:id="@+id/Bar_chart"
+                android:title="Bar Chart"/>
+
+
+
+        </menu>menu>
+    </item>
+
+
 
 </menu>

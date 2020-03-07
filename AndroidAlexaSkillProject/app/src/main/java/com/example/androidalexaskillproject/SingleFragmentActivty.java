@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -39,6 +41,7 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
             fragment = createFragment();
             fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
         }
+
     }
 
     @Override
@@ -64,6 +67,24 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
 
             case R.id.subitem2_list:
                 Toast.makeText(this, "Item 2 selected", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.select_stats:
+                Toast.makeText(this, "stats selected", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.Pie_chart:
+                Toast.makeText(this, "pie selected", Toast.LENGTH_SHORT).show();
+                Intent PieChartItent = new Intent(this, PieChartReturnFragment.class);
+                startActivity(PieChartItent);
+
+                return true;
+
+            case R.id.Bar_chart:
+                Toast.makeText(this, "pie selected", Toast.LENGTH_SHORT).show();
+                Intent BarChartItent = new Intent(this, BarChartReturnFragment.class);
+                startActivity(BarChartItent);
+
                 return true;
 
                 default:
