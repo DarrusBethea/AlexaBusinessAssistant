@@ -54,7 +54,7 @@ public class MainListFragment extends Fragment {
         ListInfo  listinfo = ListInfo.get(getActivity());
 
 
-        List<Sheet> sheets = listinfo.getInfo();
+        List<Profits> sheets = listinfo.getInfo();
         for(int i = 0; i < sheets.size(); i++){
             System.out.println(sheets.get(i).getmAmount());
 
@@ -66,36 +66,37 @@ public class MainListFragment extends Fragment {
     private class Viewholder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
 
-        public ImageView mAddImage;
+        //public ImageView mAddImage;
         public ImageView mEditImage;
         public ImageView mDeleteImage;
-        private TextView mNameSheet;
-        private TextView MValueSheet;
-        private TextView mLastnameSheet;
-        private TextView mDateSheet;
+        private TextView mNameProfits;
+        private TextView MValueProfits;
+        private TextView mLastnameProfits;
+        private TextView mDateProfits;
 
-        private Sheet mProfit;
+        private Profits mProfit;
 
         public Viewholder(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.list_view_items, parent, false));
             itemView.setOnClickListener(this);
-            mNameSheet = itemView.findViewById(R.id.name_list);
-            MValueSheet = itemView.findViewById(R.id.profit_list);
-            mLastnameSheet = itemView.findViewById(R.id.list_profits_lastname);
-            mDateSheet = itemView.findViewById(R.id.list_profit_date);
+            mNameProfits = itemView.findViewById(R.id.name_list);
+            MValueProfits = itemView.findViewById(R.id.profit_list);
+            mLastnameProfits = itemView.findViewById(R.id.list_profits_lastname);
+            mDateProfits = itemView.findViewById(R.id.list_profit_date);
             mDeleteImage = itemView.findViewById(R.id.profit_image_delete_list);
-            mAddImage = itemView.findViewById(R.id.profit_image_add_list);
+
+            //Removed this from the view card and made this a general add button on the top bar
+            //mAddImage = itemView.findViewById(R.id.profit_image_add_list);
+
             mEditImage = itemView.findViewById(R.id.profit_image_edit_list);
-
-
         }
 
-        public void bind(Sheet profit) {
+        public void bind(Profits profit) {
             mProfit = profit;
-            mNameSheet.setText(mProfit.getmName());
-            MValueSheet.setText(mProfit.getmAmount());
-            mLastnameSheet.setText(mProfit.getmLastname());
-            mDateSheet.setText(mProfit.getmDate());
+            mNameProfits.setText(mProfit.getmName());
+            MValueProfits.setText(mProfit.getmAmount());
+            mLastnameProfits.setText(mProfit.getmLastname());
+            mDateProfits.setText(mProfit.getmDate());
 
         }
 
@@ -112,12 +113,12 @@ public class MainListFragment extends Fragment {
 
 
     private class MainAdapter extends RecyclerView.Adapter<Viewholder> {
-        private List<Sheet> mProfts;
+        private List<Profits> mProfts;
 
 
 
-        public MainAdapter(List<Sheet> _sheets) {
-            mProfts = _sheets;
+        public MainAdapter(List<Profits> _profits) {
+            mProfts = _profits;
         }
 
 
@@ -132,7 +133,7 @@ public class MainListFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(Viewholder holder, int position) {
-            final Sheet profit = mProfts.get(position);
+            final Profits profit = mProfts.get(position);
             holder.bind(profit);
 
 
@@ -148,14 +149,15 @@ public class MainListFragment extends Fragment {
                 }
             });
 
-            holder.mAddImage.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), ProfitReturnAddFragment.class);
-
-                    startActivity(intent);
-                }
-            });
+            //M.Marinaro 3/8/20 : Add button moved to top bar
+//            holder.mAddImage.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent intent = new Intent(getActivity(), ProfitReturnAddFragment.class);
+//
+//                    startActivity(intent);
+//                }
+//            });
 
             holder.mEditImage.setOnClickListener(new View.OnClickListener() {
                 @Override

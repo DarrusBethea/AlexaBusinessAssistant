@@ -17,20 +17,20 @@ import java.util.List;
 
 public class ListInfo {
 
-    //M. Marinaro 3/4/20 : Abstracted to just 'sheet' as this will display any url sheet it is given
+    //M. Marinaro 3/9/20 : TODO Currently this works for any sheet which has 4 columns and the last column is a date of style "2020-10-10." make this work for any 4 columns
 
     // FAH 2/22/2020: this list is where we will store the sheet data
     public static ArrayList<String> InfoListView = new ArrayList<>();
 public static  int counter = 0;
     private static ListInfo sListInfo;
-    private List<Sheet> mSheets;
+    private List<Profits> mProfits;
 
 
     private ListInfo(Context context) {
-        mSheets = new ArrayList<>();
+        mProfits = new ArrayList<>();
 
         for (int i = 0; i < InfoListView.size() - 1; i++) {
-            Sheet _sheets = new Sheet();
+            Profits _profits = new Profits();
             //FAH2/23/2020: getting the sheet info this will update the ui list
             String line = InfoListView.get(i);
             //FAH2/23/2020: spliting the list by a "
@@ -39,12 +39,12 @@ public static  int counter = 0;
             Datesplitted[0] = Datesplitted[0].substring(0,Datesplitted[0].length() - 3);
 
             //Fah 2/23/2020: this is name and value of the row in the list then will add it to
-            //mSheets
-            _sheets.setmName(splitted[3]);
-            _sheets.setmLastname(splitted[7]);
-            _sheets.setmAmount(splitted[10].replaceAll(":", "").replaceAll("\\," , ""));
-            _sheets.setmDate(Datesplitted[0]);
-            mSheets.add(_sheets);
+            //mProfits
+            _profits.setmName(splitted[3]);
+            _profits.setmLastname(splitted[7]);
+            _profits.setmAmount(splitted[10].replaceAll(":", "").replaceAll("\\," , ""));
+            _profits.setmDate(Datesplitted[0]);
+            mProfits.add(_profits);
         }
 
 
@@ -59,9 +59,9 @@ public static  int counter = 0;
     }
 
 
-    public List<Sheet> getInfo() {
+    public List<Profits> getInfo() {
 
-        return mSheets;
+        return mProfits;
 
     }
 

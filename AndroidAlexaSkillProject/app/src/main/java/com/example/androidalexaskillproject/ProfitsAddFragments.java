@@ -37,13 +37,13 @@ public class ProfitsAddFragments extends Fragment {
 
     }
 
-
-    // TODO FAH 2/24/2020: this fragment will open where the add button clicks click still need to create add button to the toolbar
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_profits_add, container, false);
         // FAH 2/16/2020: if the text if change in the text box then it will be set here
         mNameField = v.findViewById(R.id.profit_add_Firstname);
+        //M.Marinaro3/9/20 : Set the hint text appropriately based on current sheet
+        mNameField.setHint(SheetRepository.getInstance().getColumn_1());
         mNameField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -64,11 +64,11 @@ public class ProfitsAddFragments extends Fragment {
 
 
         mLastNameField = v.findViewById(R.id.profit_last_name_add);
+        mLastNameField.setHint(SheetRepository.getInstance().getColumn_2());
         mLastNameField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 // This space intentionally left blank
-
             }
 
             @Override
@@ -83,6 +83,7 @@ public class ProfitsAddFragments extends Fragment {
         });
 
         mAmountField = v.findViewById(R.id.profit_amount_add);
+        mAmountField.setHint(SheetRepository.getInstance().getColumn_3());
         mAmountField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -101,6 +102,7 @@ public class ProfitsAddFragments extends Fragment {
         });
 
         mDateField = v.findViewById(R.id.profit_date_add);
+        mDateField.setHint(SheetRepository.getInstance().getColumn_4());
         mDateField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

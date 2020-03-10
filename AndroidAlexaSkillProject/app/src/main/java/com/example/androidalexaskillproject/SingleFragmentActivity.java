@@ -54,7 +54,6 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
                 startActivity(ProfitListintent);
                 return true;
 
-
             //M.Marinaro 3/4/20 : Same Here
             case R.id.Expenses_list:
                 SheetRepository.getInstance().setSheetExpenses();
@@ -62,11 +61,27 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
                 startActivity(ExpensesListIntent);
                 return true;
 
-            //M.Marinaro 3/4/20 : TODO Implament general add button
-//            case R.id.Add_item:
-////                //Intent AddItemintent = new Intent(this, ProfitsAddFragments.class);
-////                //startActivity(AddItemintent);
-////                return true;
+
+            //M.Marinaro 3/9/20 : Option to select the employees list
+            case R.id.Employees_list:
+                SheetRepository.getInstance().setSheetEmployees();
+                Intent EmployeeListIntent = new Intent(this, MainListActivity.class);
+                startActivity(EmployeeListIntent);
+                return true;
+
+
+            //M.Marinaro 3/9/20 : General Add Button
+            case R.id.Add_item:
+                Intent AddItemintent = new Intent(this, ProfitReturnAddFragment.class);
+                startActivity(AddItemintent);
+                return true;
+
+            //M.Marinaro 3/9/20 : the lack of a date as the fourth column restricts this from working
+//            case R.id.Inventory_list:
+//                SheetRepository.getInstance().setSheetInventory();
+//                Intent InventoryListIntent = new Intent(this, MainListActivity.class);
+//                startActivity(InventoryListIntent);
+//                return true;
 
                 default:
                     return super.onOptionsItemSelected(item);

@@ -60,23 +60,28 @@ public class ProfitsDeleteFragment extends Fragment {
         mNameField = v.findViewById(R.id.profit_name_delete);
         mNameField.setEnabled(false);
         mNameField.setText(DeleteName);
+        //M.Marinaro3/9/20 : Set the hint text appropriately based on current sheet
+        mNameField.setHint(SheetRepository.getInstance().getColumn_1());
         mProfits.setmName(DeleteName);
 
 
         mLastNameField = v.findViewById(R.id.profit_lastname_delete);
         mLastNameField.setEnabled(false);
         mLastNameField.setText(DeleteLastName);
+        mLastNameField.setHint(SheetRepository.getInstance().getColumn_2());
         mProfits.setmLastname(DeleteLastName);
 
         mAmountField = v.findViewById(R.id.profit_amount_delete);
         mAmountField.setEnabled(false);
         mAmountField.setText(DeleteAmount);
+        mAmountField.setHint(SheetRepository.getInstance().getColumn_3());
         mProfits.setmAmount(DeleteAmount);
 
 
         mDatetField = v.findViewById(R.id.profit_date_delete);
         mDatetField.setEnabled(false);
         mDatetField.setText(DeleteDate);
+        mAmountField.setHint(SheetRepository.getInstance().getColumn_4());
         mProfits.setmDate(DeleteDate);
 
 

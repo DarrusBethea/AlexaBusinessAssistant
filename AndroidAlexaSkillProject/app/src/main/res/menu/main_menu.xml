@@ -8,6 +8,7 @@
         app:showAsAction="ifRoom"
         ></item>
 
+
     <item android:id="@+id/drop_down_menu_list"
         android:icon="@drawable/ic_list"
         android:title=" Item 1"
@@ -18,9 +19,17 @@
                 android:title="Profits List"/>
 
             <item android:id="@+id/Expenses_list"
-                android:title="Expenses List"/>
+            android:title="Expenses List"/>
 
-        </menu>menu>
+            <item android:id="@+id/Employees_list"
+            android:title="Employees List"/>
+
+<!--            M.Marinaro 3/9/20 : the lack of a date as the fourth column restricts this from working-->
+<!--            <item android:id="@+id/Inventory_list"-->
+<!--                android:title="Inventory List"/>-->
+
+
+        </menu>
     </item>
 
 
