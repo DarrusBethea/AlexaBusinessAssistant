@@ -45,7 +45,7 @@ app.setHandler({
     MyNameIsIntent() {
         this.tell('Hey ' + this.$inputs.name.value + ', nice to meet you!');
     },
-ls
+
     getQuarterOneIntent() {
         this.ask(this.t('get.quarterOne'));
      
