@@ -86,6 +86,8 @@ public class ProfitEditFragment extends Fragment {
 
         // FAH 2/16/2020: if the text if change in the text box then it will be set here
         mEditNameField = v.findViewById(R.id.profit_edit_Firstname);
+        //M.Marinaro3/9/20 : Set the hint text appropriately based on current sheet
+        mEditNameField.setHint(SheetRepository.getInstance().getColumn_1());
         mEditNameField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -106,6 +108,7 @@ public class ProfitEditFragment extends Fragment {
 
 
         mEditLastNameField = v.findViewById(R.id.profit_last_name_edit);
+        mEditLastNameField.setHint(SheetRepository.getInstance().getColumn_2());
         mEditLastNameField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -125,6 +128,7 @@ public class ProfitEditFragment extends Fragment {
         });
 
         mEditAmountField = v.findViewById(R.id.profit_amount_edit);
+        mEditAmountField.setHint(SheetRepository.getInstance().getColumn_3());
         mEditAmountField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -143,6 +147,7 @@ public class ProfitEditFragment extends Fragment {
         });
 
         mEditDateField = v.findViewById(R.id.profit_date_edit);
+        mEditDateField.setHint(SheetRepository.getInstance().getColumn_4());
         mEditDateField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -210,8 +215,8 @@ public class ProfitEditFragment extends Fragment {
                     ReturnList();
 
                 }
-            }, 4000);
-            Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbwI9wvauddFIGMMUNrqqtb5aXXURM3_Jo468jxTsWGe/dev?sheetname=profits&AddDelete=edit&Firstname="+
+            }, 4000);                      //M.Marinaro 3/8/20 : Use the sheetcode url from SheetRepository                      //M.Marinaro 3/5/20 : Use the current sheetname
+            Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse(SheetRepository.getInstance().getSheetCodeUrl() + "?sheetname=" + SheetRepository.getInstance().getSheetName() + "&AddDelete=edit&Firstname="+
                     OldFirsteName.toString() +"&LastName=" + OldLastName.toString() + "&profit=" + OldAmount.toString() +
                     "&Date=" + OldDate.toString() + "&EditFirstName="+ mProfits.getmName()+
                     "&EditLastName=" + mProfits.getmLastname() +  "&EditProfit=" + mProfits.getmAmount()+"&EditDate=" + mProfits.getmDate()));

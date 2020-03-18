@@ -30,13 +30,11 @@
         </activity>
         <activity android:name="com.example.androidalexaskillproject.MainActivity" >
         </activity>
+        <activity android:name="com.example.androidalexaskillproject.ProfitsAddFragments" >
+        </activity>
         <activity android:name="com.example.androidalexaskillproject.ProfitReturnAddFragment" >
         </activity>
         <activity android:name="com.example.androidalexaskillproject.ProfitReturnEditFragment" >
-        </activity>
-        <activity android:name="com.example.androidalexaskillproject.PieChartReturnFragment" >
-        </activity>
-        <activity android:name="com.example.androidalexaskillproject.BarChartReturnFragment" >
         </activity>
     </application>
 

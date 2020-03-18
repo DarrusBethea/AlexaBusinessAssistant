@@ -19,16 +19,12 @@
         </activity>
         <activity android:name=".MainActivity">
         </activity>
+        <activity android:name=".ProfitsAddFragments">
+        </activity>
         <activity android:name=".ProfitReturnAddFragment">
         </activity>
 
         <activity android:name=".ProfitReturnEditFragment">
-        </activity>
-
-        <activity android:name=".PieChartReturnFragment">
-        </activity>
-
-        <activity android:name=".BarChartReturnFragment">
         </activity>
 
     </application>

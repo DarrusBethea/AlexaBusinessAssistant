@@ -2,7 +2,7 @@ package com.example.androidalexaskillproject;
 
 import androidx.fragment.app.Fragment;
 
-public class ProfitReturnEditFragment extends SingleFragmentActivty {
+public class ProfitReturnEditFragment extends SingleFragmentActivity {
 
 
     @Override

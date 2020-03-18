@@ -11,7 +11,6 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
-array names
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -645,7 +644,6 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable ic_add
-drawable ic_business
 drawable ic_delete
 drawable ic_edit
 drawable ic_launcher_background
@@ -666,13 +664,13 @@ drawable notify_panel_notification_icon_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
-id Bar_chart
-id Barchart_spinner
+id Add_item
 id CTRL
+id Employees_list
+id Expenses_list
 id FUNCTION
 id META
-id Pie_chart
-id Profit_list
+id Profits_list
 id SHIFT
 id SYM
 id action_bar
@@ -700,7 +698,6 @@ id alertTitle
 id all
 id always
 id async
-id bar_chart_object
 id barrier
 id beginning
 id blocking
@@ -771,8 +768,6 @@ id packed
 id parent
 id parentPanel
 id percent
-id pie_chart_object
-id piechart_spinner
 id profit__amount_edit_old
 id profit_add_Firstname
 id profit_add_btn
@@ -786,7 +781,6 @@ id profit_date_edit_old
 id profit_edit_Firstname
 id profit_edit_Firstname_old
 id profit_edit_btn
-id profit_image_add_list
 id profit_image_delete_list
 id profit_image_edit_list
 id profit_last_name_add
@@ -795,10 +789,10 @@ id profit_lastname_delete
 id profit_lastname_edit_old
 id profit_list
 id profit_name_delete
-id profits_recycler_view
 id progress_circular
 id progress_horizontal
 id radio
+id recycler_view
 id right
 id right_icon
 id right_side
@@ -817,7 +811,6 @@ id search_plate
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
-id select_stats
 id shortcut
 id showCustom
 id showHome
@@ -831,7 +824,6 @@ id src_in
 id src_over
 id standard
 id start
-id subitem2_list
 id submenuarrow
 id submit_area
 id tabMode
@@ -888,7 +880,6 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
-layout barchart_fragment
 layout fragment_delete_profits
 layout fragment_profits_add
 layout fragment_profits_edit
@@ -900,7 +891,6 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout piechart_fragment
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -948,8 +938,13 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
+string column1_text
+string column2_text
+string column3_text
+string column4_text
 string search_menu_title
 string status_bar_notification_info_overflow
+string test_text
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

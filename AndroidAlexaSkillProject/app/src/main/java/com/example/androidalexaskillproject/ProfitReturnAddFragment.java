@@ -2,7 +2,7 @@ package com.example.androidalexaskillproject;
 
 import androidx.fragment.app.Fragment;
 
-public class ProfitReturnAddFragment extends SingleFragmentActivty {
+public class ProfitReturnAddFragment extends SingleFragmentActivity {
 
 
 
