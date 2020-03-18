@@ -17,7 +17,6 @@ import java.util.List;
 
 public class ListInfo {
 
-    //M. Marinaro 3/9/20 : TODO Currently this works for any sheet which has 4 columns and the last column is a date of style "2020-10-10." make this work for any 4 columns
 
     // FAH 2/22/2020: this list is where we will store the sheet data
     public static ArrayList<String> InfoListView = new ArrayList<>();
@@ -80,8 +79,8 @@ public static  int counter = 0;
 
 
             try {
-                URL url = new URL(                                                                                          //M.Marinaro 3/6/20 : get the current sheet url and name
-                        "https://script.google.com/macros/s/AKfycbzRJecRXqinxLQxHRix6F3JmjHso5NyxNgXABdWrDIhwjM4UvY/exec?id="+ SheetRepository.getInstance().getSheetUrl()+"&sheet=" + SheetRepository.getInstance().getSheetName());
+                URL url = new URL(
+                        "https://script.google.com/macros/s/AKfycbzRJecRXqinxLQxHRix6F3JmjHso5NyxNgXABdWrDIhwjM4UvY/exec?id=1KE91K1eYxlfSV9gHfI1LBNaCtAS_c-o8rTF92NlEWvg&sheet=profits");
                 urlConnection = (HttpURLConnection) url.openConnection();
 
                 int code = urlConnection.getResponseCode();

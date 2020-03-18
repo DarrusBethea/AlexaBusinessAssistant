@@ -67,17 +67,16 @@
         app:srcCompat="@drawable/ic_delete"
         tools:ignore="VectorDrawableCompat" />
 
-    <!-- M.Marinaro 3/8/20 : Removed this for the general add button-->
-<!--    <ImageView-->
-<!--        android:id="@+id/profit_image_add_list"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="32dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.875"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@drawable/ic_add" />-->
+    <ImageView
+        android:id="@+id/profit_image_add_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_add" />
 
     <ImageView
         android:id="@+id/profit_image_edit_list"

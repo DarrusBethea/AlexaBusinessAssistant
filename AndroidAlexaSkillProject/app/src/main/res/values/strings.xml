@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">AndroidAlexaSkillProject</string>
 
-    <!-- Currently dynamically setting text hint doesnt seem to work, we'll use this until it does-->
-    <string name="column1_text">Name</string>
-    <string name="column2_text">Last Name/ Type</string>
-    <string name="column3_text">Amount</string>
-    <string name="column4_text">Date</string>
-    <string name="test_text">test</string>
+    <string-array name="names">
+        <item> home</item>
+        <item> work</item>
+        <item> other</item>
+        <item> custom</item>
 
+    </string-array>
 </resources>
