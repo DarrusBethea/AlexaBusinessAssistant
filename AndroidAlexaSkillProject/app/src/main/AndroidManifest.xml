@@ -31,6 +31,9 @@
         <activity android:name=".BarChartReturnFragment">
         </activity>
 
+        <activity android:name=".ProfitsAddFragments">
+        </activity>
+
     </application>
 
 </manifest>
