@@ -1,18 +1,32 @@
 package com.example.androidalexaskillproject;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
-public abstract class SingleFragmentActivity extends AppCompatActivity {
+public abstract class SingleFragmentActivty extends AppCompatActivity {
     protected abstract Fragment createFragment();
 
 
@@ -27,10 +41,9 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
             fragment = createFragment();
             fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
         }
+
     }
 
-
-    //Options Menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -76,12 +89,23 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
                 startActivity(AddItemintent);
                 return true;
 
-            //M.Marinaro 3/9/20 : the lack of a date as the fourth column restricts this from working
-//            case R.id.Inventory_list:
-//                SheetRepository.getInstance().setSheetInventory();
-//                Intent InventoryListIntent = new Intent(this, MainListActivity.class);
-//                startActivity(InventoryListIntent);
-//                return true;
+            case R.id.select_stats:
+                Toast.makeText(this, "stats selected", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.Pie_chart:
+                Toast.makeText(this, "pie selected", Toast.LENGTH_SHORT).show();
+                Intent PieChartItent = new Intent(this, PieChartReturnFragment.class);
+                startActivity(PieChartItent);
+
+                return true;
+
+            case R.id.Bar_chart:
+                Toast.makeText(this, "pie selected", Toast.LENGTH_SHORT).show();
+                Intent BarChartItent = new Intent(this, BarChartReturnFragment.class);
+                startActivity(BarChartItent);
+
+                return true;
 
                 default:
                     return super.onOptionsItemSelected(item);

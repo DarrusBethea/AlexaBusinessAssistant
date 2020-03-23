@@ -37,6 +37,8 @@ public class ProfitsAddFragments extends Fragment {
 
     }
 
+
+    // TODO FAH 2/24/2020: this fragment will open where the add button clicks click still need to create add button to the toolbar
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_profits_add, container, false);
@@ -69,6 +71,7 @@ public class ProfitsAddFragments extends Fragment {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 // This space intentionally left blank
+
             }
 
             @Override
@@ -170,12 +173,10 @@ public class ProfitsAddFragments extends Fragment {
                     ReturnList();
 
                 }
-            }, 4000);                                              //M.Marinaro 3/6/20 : Use the current url and sheetname
-            Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse(SheetRepository.getInstance().getSheetCodeUrl() + "?sheetname=" + SheetRepository.getInstance().getSheetName() + "&AddDelete=add&Firstname=" + mProfits.getmName() + "&LastName=" + mProfits.getmLastname() + "&profit=" + mProfits.getmAmount() + "&Date=" + mProfits.getmDate()));
-
+            }, 4000);
+            Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse(SheetRepository.getInstance().getSheetCodeUrl() + "?sheetname=" + SheetRepository.getInstance().getSheetName() + "&AddDelete=add&Firstname=" + mProfits.getmName() + "&LastName=" + mProfits.getmLastname()
+                    + "&profit=" + mProfits.getmAmount() + "&Date=" + mProfits.getmDate()));
             startActivity(intentClick);
-
-
 
             return "";
 

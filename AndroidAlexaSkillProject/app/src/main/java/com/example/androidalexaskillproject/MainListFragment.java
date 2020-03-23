@@ -1,22 +1,32 @@
 package com.example.androidalexaskillproject;
 
+import android.content.Context;
 import android.content.Intent;
+import android.icu.util.ULocale;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-//M. Marinaro 3/4/20 : TODO Should work for any current sheet
-
-//FAH 2/24/2020: this class is mainly for sheets sheet
+//FAH 2/24/2020: this class is mainly for profits sheet
 // i should have added better naming conventions, but if your trying to create list
 // view for different sheet, justt create new class and reuse/ edit code
 public class MainListFragment extends Fragment {
@@ -36,7 +46,7 @@ public class MainListFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.main_list_fragment, container, false);
 
-        mProfitRecyclerView = view.findViewById(R.id.recycler_view);
+        mProfitRecyclerView = view.findViewById(R.id.profits_recycler_view);
         mProfitRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         updateUI();
         return view;
@@ -54,19 +64,19 @@ public class MainListFragment extends Fragment {
         ListInfo  listinfo = ListInfo.get(getActivity());
 
 
-        List<Profits> sheets = listinfo.getInfo();
-        for(int i = 0; i < sheets.size(); i++){
-            System.out.println(sheets.get(i).getmAmount());
+        List<Profits> profits = listinfo.getInfo();
+        for(int i = 0; i < profits.size(); i++){
+            System.out.println(profits.get(i).getmAmount());
 
         }
-        mAdapter = new MainAdapter(sheets);
+        mAdapter = new MainAdapter(profits);
         mProfitRecyclerView.setAdapter(mAdapter);
     }
 
     private class Viewholder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
 
-        //public ImageView mAddImage;
+        public ImageView mAddImage;
         public ImageView mEditImage;
         public ImageView mDeleteImage;
         private TextView mNameProfits;
@@ -89,6 +99,8 @@ public class MainListFragment extends Fragment {
             //mAddImage = itemView.findViewById(R.id.profit_image_add_list);
 
             mEditImage = itemView.findViewById(R.id.profit_image_edit_list);
+
+
         }
 
         public void bind(Profits profit) {

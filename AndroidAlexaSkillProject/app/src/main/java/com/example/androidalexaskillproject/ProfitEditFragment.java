@@ -215,7 +215,7 @@ public class ProfitEditFragment extends Fragment {
                     ReturnList();
 
                 }
-            }, 4000);                      //M.Marinaro 3/8/20 : Use the sheetcode url from SheetRepository                      //M.Marinaro 3/5/20 : Use the current sheetname
+            }, 4000);
             Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse(SheetRepository.getInstance().getSheetCodeUrl() + "?sheetname=" + SheetRepository.getInstance().getSheetName() + "&AddDelete=edit&Firstname="+
                     OldFirsteName.toString() +"&LastName=" + OldLastName.toString() + "&profit=" + OldAmount.toString() +
                     "&Date=" + OldDate.toString() + "&EditFirstName="+ mProfits.getmName()+
