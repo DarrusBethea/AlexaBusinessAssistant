@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#31C4F3</color>
+    <color name="colorPrimaryDark">#B731C4F3</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="gradStop">#FFFFFF</color>
+    <color name="gradStart">#31C4F3</color>
+
+    <color name="echoBlue">#31C4F3</color>
+    <color name="sheetsGreen">#0F9D58</color>
+
+    <color name="black">#000000</color>
 </resources>
