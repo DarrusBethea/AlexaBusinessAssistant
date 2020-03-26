@@ -60,23 +60,28 @@ public class ProfitsDeleteFragment extends Fragment {
         mNameField = v.findViewById(R.id.profit_name_delete);
         mNameField.setEnabled(false);
         mNameField.setText(DeleteName);
+        //M.Marinaro3/9/20 : Set the hint text appropriately based on current sheet
+        mNameField.setHint(SheetRepository.getInstance().getColumn_1());
         mProfits.setmName(DeleteName);
 
 
         mLastNameField = v.findViewById(R.id.profit_lastname_delete);
         mLastNameField.setEnabled(false);
         mLastNameField.setText(DeleteLastName);
+        mLastNameField.setHint(SheetRepository.getInstance().getColumn_2());
         mProfits.setmLastname(DeleteLastName);
 
         mAmountField = v.findViewById(R.id.profit_amount_delete);
         mAmountField.setEnabled(false);
         mAmountField.setText(DeleteAmount);
+        mAmountField.setHint(SheetRepository.getInstance().getColumn_3());
         mProfits.setmAmount(DeleteAmount);
 
 
         mDatetField = v.findViewById(R.id.profit_date_delete);
         mDatetField.setEnabled(false);
         mDatetField.setText(DeleteDate);
+        mAmountField.setHint(SheetRepository.getInstance().getColumn_4());
         mProfits.setmDate(DeleteDate);
 
 
@@ -134,7 +139,7 @@ public class ProfitsDeleteFragment extends Fragment {
 
                 }
             }, 4000 );
-            Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbyqn1fD46kgkDbscsaJ61pTG9ln9lKqE4pS9ZzaLCe2oVILr_Wg/exec?sheetname=profits&AddDelete=delete&Firstname=" + mProfits.getmName() + "&LastName=" + mProfits.getmLastname()
+            Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse(SheetRepository.getInstance().getSheetCodeUrl() + "?sheetname=" +  SheetRepository.getInstance().getSheetName() +"&AddDelete=delete&Firstname=" + mProfits.getmName() + "&LastName=" + mProfits.getmLastname()
                     +"&profit=" + mProfits.getmAmount() +"&Date=" + mProfits.getmDate()));
             startActivity(intentClick);
 

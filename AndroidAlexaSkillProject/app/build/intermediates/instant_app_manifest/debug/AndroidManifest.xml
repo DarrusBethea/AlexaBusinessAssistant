@@ -38,6 +38,8 @@
         </activity>
         <activity android:name="com.example.androidalexaskillproject.BarChartReturnFragment" >
         </activity>
+        <activity android:name="com.example.androidalexaskillproject.ProfitsAddFragments" >
+        </activity>
     </application>
 
 </manifest>

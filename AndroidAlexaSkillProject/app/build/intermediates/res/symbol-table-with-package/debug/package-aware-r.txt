@@ -666,13 +666,16 @@ drawable notify_panel_notification_icon_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
+id Add_item
 id Bar_chart
 id Barchart_spinner
 id CTRL
+id Employees_list
+id Expenses_list
 id FUNCTION
 id META
 id Pie_chart
-id Profit_list
+id Profits_list
 id SHIFT
 id SYM
 id action_bar
@@ -786,7 +789,6 @@ id profit_date_edit_old
 id profit_edit_Firstname
 id profit_edit_Firstname_old
 id profit_edit_btn
-id profit_image_add_list
 id profit_image_delete_list
 id profit_image_edit_list
 id profit_last_name_add
@@ -831,7 +833,6 @@ id src_in
 id src_over
 id standard
 id start
-id subitem2_list
 id submenuarrow
 id submit_area
 id tabMode
@@ -948,8 +949,13 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
+string column1_text
+string column2_text
+string column3_text
+string column4_text
 string search_menu_title
 string status_bar_notification_info_overflow
+string test_text
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
