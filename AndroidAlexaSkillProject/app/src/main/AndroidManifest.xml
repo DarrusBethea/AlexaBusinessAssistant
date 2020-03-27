@@ -36,6 +36,9 @@
         <activity android:name=".ProfitsAddFragments">
         </activity>
 
+        <activity android:name=".MainListGrossProfitActivity">
+        </activity>
+
     </application>
 
 </manifest>

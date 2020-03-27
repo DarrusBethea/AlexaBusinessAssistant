@@ -82,6 +82,11 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
                 startActivity(EmployeeListIntent);
                 return true;
 
+            case R.id.GrossProfit_list:
+                Intent GrossProfitListintent = new Intent(this, MainListGrossProfitActivity.class);
+                startActivity(GrossProfitListintent);
+                return true;
+
 
             //M.Marinaro 3/9/20 : General Add Button
             case R.id.Add_item:

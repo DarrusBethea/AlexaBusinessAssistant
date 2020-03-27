@@ -15,7 +15,7 @@
 11-->C:\Users\fran\Desktop\new ghithubone\AlexaBusinessAssistant1\AndroidAlexaSkillProject\app\src\main\AndroidManifest.xml:4:22-64
 12
 13    <application
-13-->C:\Users\fran\Desktop\new ghithubone\AlexaBusinessAssistant1\AndroidAlexaSkillProject\app\src\main\AndroidManifest.xml:6:5-39:19
+13-->C:\Users\fran\Desktop\new ghithubone\AlexaBusinessAssistant1\AndroidAlexaSkillProject\app\src\main\AndroidManifest.xml:6:5-42:19
 14        android:allowBackup="true"
 14-->C:\Users\fran\Desktop\new ghithubone\AlexaBusinessAssistant1\AndroidAlexaSkillProject\app\src\main\AndroidManifest.xml:7:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -74,6 +74,10 @@
 42-->C:\Users\fran\Desktop\new ghithubone\AlexaBusinessAssistant1\AndroidAlexaSkillProject\app\src\main\AndroidManifest.xml:36:9-37:20
 42-->C:\Users\fran\Desktop\new ghithubone\AlexaBusinessAssistant1\AndroidAlexaSkillProject\app\src\main\AndroidManifest.xml:36:19-54
 43        </activity>
-44    </application>
-45
-46</manifest>
+44        <activity android:name="com.example.androidalexaskillproject.MainListGrossProfitActivity" >
+44-->C:\Users\fran\Desktop\new ghithubone\AlexaBusinessAssistant1\AndroidAlexaSkillProject\app\src\main\AndroidManifest.xml:39:9-40:20
+44-->C:\Users\fran\Desktop\new ghithubone\AlexaBusinessAssistant1\AndroidAlexaSkillProject\app\src\main\AndroidManifest.xml:39:19-62
+45        </activity>
+46    </application>
+47
+48</manifest>

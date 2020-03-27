@@ -682,6 +682,7 @@ id CTRL
 id Employees_list
 id Expenses_list
 id FUNCTION
+id GrossProfit_list
 id META
 id Pie_chart
 id Profits_list
@@ -748,6 +749,10 @@ id fill_vertical
 id forever
 id fragment_container
 id gone
+id grossprofit_Month
+id grossprofit_amount
+id grossprofit_spinner
+id grossprofits_recycler_view
 id group_divider
 id groups
 id home
@@ -765,6 +770,7 @@ id line1
 id line3
 id linearLayout
 id linearLayout2
+id linearLayout3
 id listMode
 id list_item
 id list_profit_date
@@ -900,8 +906,10 @@ layout abc_tooltip
 layout activity_main
 layout barchart_fragment
 layout fragment_delete_profits
+layout fragment_gross_profits_list
 layout fragment_profits_add
 layout fragment_profits_edit
+layout grossprofit_mainlist_fragment
 layout home_screen
 layout list_view_items
 layout main_list_fragment
