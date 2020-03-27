@@ -42,6 +42,8 @@
         </activity>
         <activity android:name="com.example.androidalexaskillproject.ProfitsAddFragments" >
         </activity>
+        <activity android:name="com.example.androidalexaskillproject.MainListGrossProfitActivity" >
+        </activity>
     </application>
 
 </manifest>
