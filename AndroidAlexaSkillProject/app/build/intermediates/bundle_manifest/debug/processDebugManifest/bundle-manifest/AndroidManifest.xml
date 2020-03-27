@@ -20,7 +20,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.androidalexaskillproject.MainListActivity" >
+        <activity android:name="com.example.androidalexaskillproject.HomeScreenReturnFragment" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,6 +29,8 @@
         </activity>
         <activity android:name="com.example.androidalexaskillproject.MainActivity" >
         </activity>
+        <activity android:name="com.example.androidalexaskillproject.MainListActivity" >
+        </activity>
         <activity android:name="com.example.androidalexaskillproject.ProfitReturnAddFragment" >
         </activity>
         <activity android:name="com.example.androidalexaskillproject.ProfitReturnEditFragment" >
@@ -36,6 +38,8 @@
         <activity android:name="com.example.androidalexaskillproject.PieChartReturnFragment" >
         </activity>
         <activity android:name="com.example.androidalexaskillproject.BarChartReturnFragment" >
+        </activity>
+        <activity android:name="com.example.androidalexaskillproject.ProfitsAddFragments" >
         </activity>
     </application>
 

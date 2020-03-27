@@ -27,14 +27,14 @@ import java.util.concurrent.ExecutionException;
 public class HomeScreenFragment extends Fragment {
 
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-            View v = inflater.inflate(R.layout.home_screen, container, false);
+        View v = inflater.inflate(R.layout.home_screen, container, false);
 
 
-            return v;
-        }
+        return v;
+    }
 
 
 }

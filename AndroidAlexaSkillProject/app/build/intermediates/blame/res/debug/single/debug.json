@@ -24,12 +24,12 @@
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_edit.xml.flat",
         "source": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\src\\main\\res\\drawable\\ic_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -40,12 +40,12 @@
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\8f8ab13dc8f4e84e14a8bb3d9ac92bc4\\core-1.0.1\\res\\drawable\\notification_icon_background.xml"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xxxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\color_switch_thumb_material_dark.xml.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xxxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -64,12 +64,12 @@
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\color\\abc_primary_text_disable_only_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xxhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_time.xml.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\8f8ab13dc8f4e84e14a8bb3d9ac92bc4\\core-1.0.1\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xxhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
@@ -100,12 +100,12 @@
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\layout-v26_abc_screen_toolbar.xml.flat",
-        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\layout-v26\\abc_screen_toolbar.xml"
-    },
-    {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_menu_item_layout.xml.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\layout-v26_abc_screen_toolbar.xml.flat",
+        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\layout-v26\\abc_screen_toolbar.xml"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -260,12 +260,12 @@
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_material.xml.flat",
-        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable\\abc_ratingbar_material.xml"
-    },
-    {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_material.xml.flat",
+        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable\\abc_ratingbar_material.xml"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -276,12 +276,12 @@
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_light.xml.flat",
-        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable\\abc_item_background_holo_light.xml"
-    },
-    {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_light.xml.flat",
+        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_longpressed_holo.9.png.flat",
@@ -298,6 +298,10 @@
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_back.xml.flat",
+        "source": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\src\\main\\res\\drawable\\gradient_back.xml"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -428,12 +432,12 @@
         "source": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\src\\main\\res\\menu\\main_menu.xml"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_longpressed_holo.9.png.flat",
-        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
-    },
-    {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_longpressed_holo.9.png.flat",
+        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -520,20 +524,20 @@
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\color-v23\\abc_tint_default.xml"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
-        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
-    },
-    {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_custom_big.xml.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\8f8ab13dc8f4e84e14a8bb3d9ac92bc4\\core-1.0.1\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
-        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\layout-watch-v20\\abc_alert_dialog_button_bar_material.xml"
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
+        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
+        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\layout-watch-v20\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
@@ -572,12 +576,12 @@
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
-        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
-    },
-    {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
+        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_singlechoice_material.xml.flat",
@@ -664,12 +668,12 @@
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\8f8ab13dc8f4e84e14a8bb3d9ac92bc4\\core-1.0.1\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -680,12 +684,12 @@
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_switch_track.xml.flat",
-        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\color\\abc_tint_switch_track.xml"
-    },
-    {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_switch_track.xml.flat",
+        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\color\\abc_tint_switch_track.xml"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -714,6 +718,10 @@
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\font_muli.ttf.flat",
+        "source": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\src\\main\\res\\font\\muli.ttf"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -796,12 +804,12 @@
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_btn_colored_borderless_text_material.xml.flat",
-        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\color\\abc_btn_colored_borderless_text_material.xml"
-    },
-    {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_barchart_fragment.xml.flat",
         "source": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\src\\main\\res\\layout\\barchart_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_btn_colored_borderless_text_material.xml.flat",
+        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\color\\abc_btn_colored_borderless_text_material.xml"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
@@ -818,6 +826,10 @@
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\8f8ab13dc8f4e84e14a8bb3d9ac92bc4\\core-1.0.1\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_alexa_logo.png.flat",
+        "source": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\src\\main\\res\\drawable\\alexa_logo.png"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -1092,12 +1104,12 @@
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_cab_background_top_material.xml.flat",
-        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable\\abc_cab_background_top_material.xml"
-    },
-    {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_business.xml.flat",
         "source": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\src\\main\\res\\drawable\\ic_business.xml"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_cab_background_top_material.xml.flat",
+        "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_item_material.xml.flat",
@@ -1210,6 +1222,10 @@
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_default_mtrl_shape.xml.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sheets_logo.png.flat",
+        "source": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\src\\main\\res\\drawable\\sheets_logo.png"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_dark.xml.flat",
@@ -1594,6 +1610,10 @@
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_spinner.xml.flat",
         "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\color-v23\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_home_screen.xml.flat",
+        "source": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\src\\main\\res\\layout\\home_screen.xml"
     },
     {
         "merged": "C:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",

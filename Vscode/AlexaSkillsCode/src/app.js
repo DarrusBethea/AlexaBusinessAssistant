@@ -46,28 +46,7 @@ app.setHandler({
         this.tell('Hey ' + this.$inputs.name.value + ', nice to meet you!');
     },
 
-    getQuarterOneIntent() {
-        this.ask(this.t('get.quarterOne'));
-     
-     },
-
-     getQuarterTwoIntent() {
-        this.ask(this.t('get.quarterTwo'));
-     
-
-     },
-     
-     getQuarterThreeIntent() {
-        this.ask(this.t('get.quarterThree'));
-     
-
-     },
-
-     getQuarterFourIntent() {
-        this.ask(this.t('get.quarterFour'));
-     
-     },
-
+   
 });
 
 module.exports.app = app;

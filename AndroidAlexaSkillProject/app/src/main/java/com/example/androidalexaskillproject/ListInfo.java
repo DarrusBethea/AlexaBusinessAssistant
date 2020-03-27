@@ -80,7 +80,7 @@ public static  int counter = 0;
 
             try {
                 URL url = new URL(
-                        "https://script.google.com/macros/s/AKfycbzRJecRXqinxLQxHRix6F3JmjHso5NyxNgXABdWrDIhwjM4UvY/exec?id=1KE91K1eYxlfSV9gHfI1LBNaCtAS_c-o8rTF92NlEWvg&sheet=profits");
+                        "https://script.google.com/macros/s/AKfycbzRJecRXqinxLQxHRix6F3JmjHso5NyxNgXABdWrDIhwjM4UvY/exec?id="+ SheetRepository.getInstance().getSheetUrl()+"&sheet=" + SheetRepository.getInstance().getSheetName());
                 urlConnection = (HttpURLConnection) url.openConnection();
 
                 int code = urlConnection.getResponseCode();
