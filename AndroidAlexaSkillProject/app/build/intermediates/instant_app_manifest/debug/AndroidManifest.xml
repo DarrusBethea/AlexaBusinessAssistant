@@ -21,7 +21,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.androidalexaskillproject.MainListActivity" >
+        <activity android:name="com.example.androidalexaskillproject.HomeScreenReturnFragment" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,6 +29,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.androidalexaskillproject.MainActivity" >
+        </activity>
+        <activity android:name="com.example.androidalexaskillproject.MainListActivity" >
         </activity>
         <activity android:name="com.example.androidalexaskillproject.ProfitReturnAddFragment" >
         </activity>

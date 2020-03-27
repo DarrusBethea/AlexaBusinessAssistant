@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_back">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="256dp"
+        android:layout_height="199dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="152dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="alexa"
+        android:scaleType="fitCenter"
+        android:src="@drawable/alexa_logo" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="332dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="sheets"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sheets_logo" />
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="225dp"
+        android:contentDescription="header"
+        android:paddingTop="50dp"
+        android:text="Small Business Assistant"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:fontFamily="@font/muli" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:layout_marginBottom="5dp"
+        android:contentDescription="footer"
+        android:text="v0.1 | Created by: Francis Hartey, Michael Marinaro, Anthony Datello, Jacob Dominguez,
+                            Mayankkumar Patel, William Geary, Darrus Bethea"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        app:fontFamily="@font/muli" />
+
+</RelativeLayout>

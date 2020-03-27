@@ -1,4 +1,4 @@
-#Thu Mar 26 17:36:36 EASST 2020
-base.0=C\:\\Users\\fran\\Desktop\\AlexaBusinessAssistant-Michael\\AndroidAlexaSkillProject\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Fri Mar 27 13:49:24 EASST 2020
+base.0=C\:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

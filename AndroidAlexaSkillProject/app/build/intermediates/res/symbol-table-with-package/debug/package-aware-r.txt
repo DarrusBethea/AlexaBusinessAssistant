@@ -383,6 +383,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -398,10 +399,13 @@ color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
 color dim_foreground_material_light
+color echoBlue
 color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gradStart
+color gradStop
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -432,6 +436,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color sheetsGreen
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -644,6 +649,8 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable alexa_logo
+drawable gradient_back
 drawable ic_add
 drawable ic_business
 drawable ic_delete
@@ -663,8 +670,10 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable sheets_logo
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font muli
 id ALT
 id Add_item
 id Bar_chart
@@ -893,6 +902,7 @@ layout barchart_fragment
 layout fragment_delete_profits
 layout fragment_profits_add
 layout fragment_profits_edit
+layout home_screen
 layout list_view_items
 layout main_list_fragment
 layout notification_action
