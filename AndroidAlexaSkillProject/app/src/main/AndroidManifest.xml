@@ -39,6 +39,9 @@
         <activity android:name=".MainListGrossProfitActivity">
         </activity>
 
+        <activity android:name=".LineChartReturnFragment">
+        </activity>
+
     </application>
 
 </manifest>

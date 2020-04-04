@@ -112,6 +112,12 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
 
                 return true;
 
+            case R.id.Line_chart:
+                Intent LineChartItent = new Intent(this, LineChartReturnFragment.class);
+                startActivity(LineChartItent);
+
+                return true;
+
                 default:
                     return super.onOptionsItemSelected(item);
         }

@@ -41,6 +41,9 @@
             <item android:id="@+id/Bar_chart"
                 android:title="Bar Chart"/>
 
+            <item android:id="@+id/Line_chart"
+                android:title="Line Chart"/>
+
 
 
         </menu>menu>
