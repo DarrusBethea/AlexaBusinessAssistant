@@ -2,17 +2,29 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item android:id="@+id/Add_item"
+        android:icon="@drawable/ic_add"
+        android:title="Add Item"
+        app:showAsAction="ifRoom"
+        ></item>
+
     <item android:id="@+id/drop_down_menu_list"
         android:icon="@drawable/ic_list"
         android:title=" Item 1"
         app:showAsAction="ifRoom">
 
         <menu>
-            <item android:id="@+id/Profit_list"
-                android:title="Profit List"/>
+            <item android:id="@+id/Profits_list"
+                android:title="Profits List"/>
 
-            <item android:id="@+id/subitem2_list"
-                android:title="Sub Item 2"/>
+            <item android:id="@+id/Expenses_list"
+                android:title="Expenses List"/>
+
+            <item android:id="@+id/Employees_list"
+                android:title="Employees List"/>
+
+            <item android:id="@+id/GrossProfit_list"
+                android:title="Gross Profit List"/>
 
         </menu>menu>
     </item>
@@ -28,6 +40,9 @@
 
             <item android:id="@+id/Bar_chart"
                 android:title="Bar Chart"/>
+
+            <item android:id="@+id/Line_chart"
+                android:title="Line Chart"/>
 
 
 
