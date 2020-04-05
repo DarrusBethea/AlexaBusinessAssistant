@@ -1,0 +1,249 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "school project",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello"
+          ]
+        },
+        {
+          "name": "TotalProfitsIntent",
+          "slots": [],
+          "samples": [
+            "what are my total profits",
+            "what were my total profits",
+            "Total profits"
+          ]
+        },
+        {
+          "name": "MyNameIsIntent",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.Actor"
+            }
+          ],
+          "samples": [
+            "what is our {name} looking like",
+            "test"
+          ]
+        },
+        {
+          "name": "BasicIntent",
+          "slots": [],
+          "samples": [
+            "hey man"
+          ]
+        },
+        {
+          "name": "getQuarterOneIntent",
+          "slots": [],
+          "samples": [
+            "what is quarter ones total profits",
+            "what was quarter ones total profits",
+            "Quarter one"
+          ]
+        },
+        {
+          "name": "getQuarterTwoIntent",
+          "slots": [],
+          "samples": [
+            "what is quarter twos total profits",
+            "what was quarter twos total profits",
+            "Quarter two"
+          ]
+        },
+        {
+          "name": "getQuarterThreeIntent",
+          "slots": [],
+          "samples": [
+            "what is quarter threes total profits",
+            "what was quarter threes total profits",
+            "Quarter three"
+          ]
+        },
+        {
+          "name": "getQuarterFourIntent",
+          "slots": [],
+          "samples": [
+            "what was quarter fours total profits",
+            "what is quarter four total profits",
+            "Quarter four"
+          ]
+        },
+        {
+          "name": "HoursWorkedIntent",
+          "slots": [],
+          "samples": [
+            "total hours",
+            "hours worked",
+            "how many hours did my employees work",
+            "get hours worked"
+          ]
+        },
+        {
+          "name": "InventoryTotalIntent",
+          "slots": [
+            {
+              "name": "inventory",
+              "type": "Inventory"
+            },
+            {
+              "name": "food",
+              "type": "AMAZON.Food"
+            }
+          ],
+          "samples": [
+            "what is our {food} stock looking like",
+            "how much {food} is left",
+            "get total {food}",
+            "{food}"
+          ]
+        },
+        {
+          "name": "MothlyProfitsIntent",
+          "slots": [
+            {
+              "name": "months",
+              "type": "AMAZON.Month"
+            }
+          ],
+          "samples": [
+            "what was this {months} profit",
+            "what was this {months} total profit",
+            "what was {months} total profit",
+            "what was {months} profit"
+          ]
+        },
+        {
+          "name": "MothlyExpensesIntent",
+          "slots": [
+            {
+              "name": "months",
+              "type": "AMAZON.Month"
+            }
+          ],
+          "samples": [
+            "what was {months} expense",
+            "what was this {months} total expenses",
+            "what was this {months} expense",
+            "what was {months} total expenses"
+          ]
+        },
+        {
+          "name": "MothlyTotalIntent",
+          "slots": [
+            {
+              "name": "months",
+              "type": "AMAZON.Month"
+            }
+          ],
+          "samples": [
+            "what was {months} gross profit",
+            "what was {months} total gross profit",
+            "what was this {months} total gross profit",
+            "what was this {months} gross profit"
+          ]
+        },
+        {
+          "name": "EndTalkIntent",
+          "slots": [],
+          "samples": [
+            "no that is okay",
+            "no thank you",
+            "no",
+            "Goodbye"
+          ]
+        },
+        {
+          "name": "ProfitNameSearchIntent",
+          "slots": [
+            {
+              "name": "firstname",
+              "type": "AMAZON.US_FIRST_NAME"
+            },
+            {
+              "name": "lastname",
+              "type": "AMAZON.Actor"
+            }
+          ],
+          "samples": [
+            "What was the total amount that {firstname} {lastname} sent me",
+            "test hi"
+          ]
+        },
+        {
+          "name": "YesIntent",
+          "slots": [],
+          "samples": [
+            "yes"
+          ]
+        },
+        {
+          "name": "NoIntent",
+          "slots": [],
+          "samples": [
+            "no"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "item"
+              }
+            },
+            {
+              "name": {
+                "value": "product"
+              }
+            },
+            {
+              "name": {
+                "value": "inventory"
+              }
+            },
+            {
+              "name": {
+                "value": "stock"
+              }
+            }
+          ],
+          "name": "Inventory"
+        }
+      ],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    }
+  },
+  "version": "34"
+}
