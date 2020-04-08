@@ -82,6 +82,12 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
                 startActivity(EmployeeListIntent);
                 return true;
 
+            case R.id.Inventory_list:
+                SheetRepository.getInstance().setSheetInventory();
+                Intent InventoryListIntent = new Intent(this, MainListActivity.class);
+                startActivity(InventoryListIntent);
+                return true;
+
             case R.id.GrossProfit_list:
                 Intent GrossProfitListintent = new Intent(this, MainListGrossProfitActivity.class);
                 startActivity(GrossProfitListintent);

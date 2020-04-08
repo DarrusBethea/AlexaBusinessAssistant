@@ -2,11 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/Add_item"
-        android:icon="@drawable/ic_add"
-        android:title="Add Item"
-        app:showAsAction="ifRoom"
-        ></item>
+
 
     <item android:id="@+id/drop_down_menu_list"
         android:icon="@drawable/ic_list"
@@ -22,6 +18,9 @@
 
             <item android:id="@+id/Employees_list"
                 android:title="Employees List"/>
+
+            <item android:id="@+id/Inventory_list"
+                android:title="Inventory List"/>
 
             <item android:id="@+id/GrossProfit_list"
                 android:title="Gross Profit List"/>
