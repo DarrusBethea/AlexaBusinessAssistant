@@ -82,6 +82,12 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
                 startActivity(EmployeeListIntent);
                 return true;
 
+            case R.id.Inventory_list:
+                SheetRepository.getInstance().setSheetInventory();
+                Intent InventoryListIntent = new Intent(this, MainListActivity.class);
+                startActivity(InventoryListIntent);
+                return true;
+
             case R.id.GrossProfit_list:
                 Intent GrossProfitListintent = new Intent(this, MainListGrossProfitActivity.class);
                 startActivity(GrossProfitListintent);
@@ -109,6 +115,12 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
                 Toast.makeText(this, "pie selected", Toast.LENGTH_SHORT).show();
                 Intent BarChartItent = new Intent(this, BarChartReturnFragment.class);
                 startActivity(BarChartItent);
+
+                return true;
+
+            case R.id.Line_chart:
+                Intent LineChartItent = new Intent(this, LineChartReturnFragment.class);
+                startActivity(LineChartItent);
 
                 return true;
 
