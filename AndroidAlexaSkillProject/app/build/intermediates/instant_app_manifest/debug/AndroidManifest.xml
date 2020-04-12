@@ -21,14 +21,12 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.androidalexaskillproject.LoginScreenReturnFragment" >
+        <activity android:name="com.example.androidalexaskillproject.HomeScreenReturnFragment" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name="com.example.androidalexaskillproject.HomeScreenReturnFragment" >
         </activity>
         <activity android:name="com.example.androidalexaskillproject.MainActivity" >
         </activity>
@@ -47,6 +45,8 @@
         <activity android:name="com.example.androidalexaskillproject.MainListGrossProfitActivity" >
         </activity>
         <activity android:name="com.example.androidalexaskillproject.LineChartReturnFragment" >
+        </activity>
+        <activity android:name="com.example.androidalexaskillproject.LoginScreenReturnFragment" >
         </activity>
     </application>
 

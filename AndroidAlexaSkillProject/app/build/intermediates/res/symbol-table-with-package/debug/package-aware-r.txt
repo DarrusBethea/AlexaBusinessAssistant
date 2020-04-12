@@ -1018,6 +1018,7 @@ drawable ic_list
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_settings
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1055,6 +1056,7 @@ id Pie_chart
 id Profits_list
 id SHIFT
 id SYM
+id Signin_opition
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1234,6 +1236,7 @@ id search_plate
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
+id select_settings
 id select_stats
 id selected
 id shortcut

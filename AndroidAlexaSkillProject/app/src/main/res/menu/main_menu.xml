@@ -48,6 +48,22 @@
         </menu>menu>
     </item>
 
+    <item android:id="@+id/select_settings"
+        android:icon="@drawable/ic_settings"
+        android:title=" Item 1"
+        app:showAsAction="ifRoom">
+
+        <menu>
+
+
+            <item android:id="@+id/Signin_opition"
+                android:title="Sign In"/>
+
+
+
+        </menu>menu>
+    </item>
+
 
 
 </menu>
