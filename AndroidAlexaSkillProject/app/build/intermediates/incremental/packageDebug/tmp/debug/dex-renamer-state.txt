@@ -1,7 +1,4 @@
-#Wed Apr 08 16:30:57 EASST 2020
-base.0=C\:\\Users\\fran\\Desktop\\fix branch\\AlexaBusinessAssistant-Mayank\\AndroidAlexaSkillProject\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
-path.1=classes.dex
-renamed.1=classes2.dex
+#Fri Apr 10 15:51:37 EASST 2020
+base.0=C\:\\Users\\fran\\Desktop\\cyrrent git hub pro\\AlexaBusinessAssistant-master\\AndroidAlexaSkillProject\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\fran\\Desktop\\new ghithubone\\AlexaBusinessAssistant1\\AndroidAlexaSkillProject\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex

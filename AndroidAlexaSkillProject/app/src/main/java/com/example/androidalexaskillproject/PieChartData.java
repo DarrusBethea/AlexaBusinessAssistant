@@ -67,7 +67,7 @@ public class PieChartData extends Fragment {
 
         // Mayank 3/3/2020: add more list here for pie chart
         String[] items = new String[]{
-                "profits list", "expense list",
+                "profits list", "expense list", "employee list", "Inventory list"
         };
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, items);
@@ -82,10 +82,10 @@ public class PieChartData extends Fragment {
 
                 if (_listselected  == "profits list"){
 
-                    int Num_Q1 = 0;
-                    int Num_Q2 = 0;
-                    int Num_Q3 = 0;
-                    int Num_Q4 = 0;
+                    double Num_Q1 = 0;
+                    double Num_Q2 = 0;
+                    double Num_Q3 = 0;
+                    double Num_Q4 = 0;
 
                     // Mayank 3/3/2020: setting up date ranges for profits sheet
                     SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -135,22 +135,22 @@ public class PieChartData extends Fragment {
                         }
 
                         if (CurrentDate.after(Q1) && CurrentDate.before(Q2)){
-                            Num_Q1 = Num_Q1 + Integer.parseInt(profits.get(i).getmAmount());
+                            Num_Q1 = Num_Q1 + Double.parseDouble(profits.get(i).getmAmount());
                         }
 
                         else if (CurrentDate.after(Q2) && CurrentDate.before(Q3)){
 
-                            Num_Q2 = Num_Q2 + Integer.parseInt(profits.get(i).getmAmount());
+                            Num_Q2 = Num_Q2 + Double.parseDouble(profits.get(i).getmAmount());
                         }
 
                         else if (CurrentDate.after(Q3) && CurrentDate.before(Q4)){
-                            Num_Q3 = Num_Q3 + Integer.parseInt(profits.get(i).getmAmount());
+                            Num_Q3 = Num_Q3 + Double.parseDouble(profits.get(i).getmAmount());
 
                         }
 
                         else if (CurrentDate.after(Q4)){
 
-                            Num_Q4 = Num_Q4 + Integer.parseInt(profits.get(i).getmAmount());
+                            Num_Q4 = Num_Q4 + Double.parseDouble(profits.get(i).getmAmount());
                         }
                         else{
 
@@ -168,10 +168,10 @@ public class PieChartData extends Fragment {
 
                     List<PieEntry> value = new ArrayList<>();
 
-                    value.add(new PieEntry(Num_Q1, "Q1"));
-                    value.add(new PieEntry(Num_Q2, "Q2"));
-                    value.add(new PieEntry(Num_Q3, "Q3"));
-                    value.add(new PieEntry(Num_Q4, "Q4"));
+                    value.add(new PieEntry((float) Num_Q1, "Q1"));
+                    value.add(new PieEntry((float) Num_Q2, "Q2"));
+                    value.add(new PieEntry((float) Num_Q3, "Q3"));
+                    value.add(new PieEntry((float) Num_Q4, "Q4"));
 
 
                      _piedataset = new PieDataSet(value, "Quarterly Profits" );
@@ -187,10 +187,10 @@ public class PieChartData extends Fragment {
                 }
                 //TODO Mayank 3/32020: add next list data here when it is created
                 else if (_listselected == "expense list"){
-                    int Num_Q1 = 0;
-                    int Num_Q2 = 0;
-                    int Num_Q3 = 0;
-                    int Num_Q4 = 0;
+                    double Num_Q1 = 0;
+                    double Num_Q2 = 0;
+                    double Num_Q3 = 0;
+                    double Num_Q4 = 0;
                     pieChart.clear();
                     _pieData.clearValues();
                     _piedataset.clear();
@@ -237,7 +237,7 @@ public class PieChartData extends Fragment {
                     for(int i = 0; i < profits.size(); i++){
 
 
-                        System.out.println(Integer.parseInt(profits.get(i).getmAmount()));
+                        System.out.println(Double.parseDouble(profits.get(i).getmAmount()));
 
                         try {
                             CurrentDate = DateFormat.parse(profits.get(i).getmDate());
@@ -245,22 +245,22 @@ public class PieChartData extends Fragment {
                             e.printStackTrace();}
 
                         if (CurrentDate.after(Q1) && CurrentDate.before(Q2)){
-                            Num_Q1 = Num_Q1 + Integer.parseInt(profits.get(i).getmAmount());
+                            Num_Q1 = Num_Q1 + Double.parseDouble(profits.get(i).getmAmount());
                         }
 
                         else if (CurrentDate.after(Q2) && CurrentDate.before(Q3)){
 
-                            Num_Q2 = Num_Q2 + Integer.parseInt(profits.get(i).getmAmount());
+                            Num_Q2 = Num_Q2 + Double.parseDouble(profits.get(i).getmAmount());
                         }
 
                         else if (CurrentDate.after(Q3) && CurrentDate.before(Q4)){
-                            Num_Q3 = Num_Q3 + Integer.parseInt(profits.get(i).getmAmount());
+                            Num_Q3 = Num_Q3 + Double.parseDouble(profits.get(i).getmAmount());
 
                         }
 
                         else if (CurrentDate.after(Q4)){
 
-                            Num_Q4 = Num_Q4 + Integer.parseInt(profits.get(i).getmAmount());
+                            Num_Q4 = Num_Q4 +Double.parseDouble(profits.get(i).getmAmount());
                         }
                         else{
 
@@ -278,10 +278,10 @@ public class PieChartData extends Fragment {
 
                     List<PieEntry> value = new ArrayList<>();
 
-                    value.add(new PieEntry(-Num_Q1,  Num_Q1+ " Q1"));
-                    value.add(new PieEntry(-Num_Q2, Num_Q2 +  " Q2"));
-                    value.add(new PieEntry(-Num_Q3, Num_Q3 +" Q3"));
-                    value.add(new PieEntry(-Num_Q4, Num_Q4 + " Q4"));
+                    value.add(new PieEntry((float) -Num_Q1,  Num_Q1+ " Q1"));
+                    value.add(new PieEntry((float) -Num_Q2, Num_Q2 +  " Q2"));
+                    value.add(new PieEntry((float) -Num_Q3, Num_Q3 +" Q3"));
+                    value.add(new PieEntry((float) -Num_Q4, Num_Q4 + " Q4"));
 
 
                      _piedataset = new PieDataSet(value, "Quarterly Expenses" );
@@ -299,8 +299,226 @@ public class PieChartData extends Fragment {
 
 
                 }
+                // FAH 4/10/2020: add employee list
+                else if (_listselected == "employee list"){
 
-                else {
+                    double Num_Q1 = 0;
+                    double Num_Q2 = 0;
+                    double Num_Q3 = 0;
+                    double Num_Q4 = 0;
+                    pieChart.clear();
+                    _pieData.clearValues();
+                    _piedataset.clear();
+                    // Mayank 3/3/2020: setting up date ranges for profits sheet
+                    SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                    try {
+                        Q1 = DateFormat.parse("2020-01-01");
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    try {
+                        Q2 = DateFormat.parse("2020-04-01");
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    try {
+                        Q3 = DateFormat.parse("2020-07-01");
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    try {
+                        Q4 = DateFormat.parse("2020-10-01");
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    SheetRepository.getInstance().setSheetEmployees();
+                    // Mayank 3/32020: getting the profits data
+                    // then add totals by monthing quater
+                    try {
+                        new ListInfo.GetData().execute().get();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    ListInfo  listinfo = ListInfo.get(getActivity());
+
+                    List<Profits> profits = listinfo.getInfo();
+
+                    for(int i = 0; i < profits.size(); i++){
+
+
+                        System.out.println(Integer.parseInt(profits.get(i).getmAmount()));
+
+                        try {
+                            CurrentDate = DateFormat.parse(profits.get(i).getmDate());
+                        } catch (ParseException e) {
+                            e.printStackTrace();}
+
+                        if (CurrentDate.after(Q1) && CurrentDate.before(Q2)){
+                            Num_Q1 = Num_Q1 + Double.parseDouble(profits.get(i).getmAmount());
+                        }
+
+                        else if (CurrentDate.after(Q2) && CurrentDate.before(Q3)){
+
+                            Num_Q2 = Num_Q2 + Double.parseDouble(profits.get(i).getmAmount());
+                        }
+
+                        else if (CurrentDate.after(Q3) && CurrentDate.before(Q4)){
+                            Num_Q3 = Num_Q3 + Double.parseDouble(profits.get(i).getmAmount());
+
+                        }
+
+                        else if (CurrentDate.after(Q4)){
+
+                            Num_Q4 = Num_Q4 + Double.parseDouble(profits.get(i).getmAmount());
+                        }
+                        else{
+
+                        }
+
+
+
+                    }
+
+                    Description desc = new Description();
+                    desc.setText("Yearly Hours Worked");
+                    desc.setTextSize(30f);
+                    pieChart.setDescription(desc);
+
+                    List<PieEntry> value = new ArrayList<>();
+
+                    value.add(new PieEntry((float) Num_Q1, "Q1"));
+                    value.add(new PieEntry((float) Num_Q2, "Q2"));
+                    value.add(new PieEntry((float) Num_Q3, "Q3"));
+                    value.add(new PieEntry((float) Num_Q4, "Q4"));
+
+
+                    _piedataset = new PieDataSet(value, "Quarterly Hours" );
+                    _piedataset.setValueTextSize(20f);
+                    _pieData = new PieData(_piedataset);
+                    _pieData.setValueTextSize(20f);
+                    pieChart.setData(_pieData);
+
+                    _piedataset.setColors(ColorTemplate.VORDIPLOM_COLORS);
+
+                    pieChart.animateXY( 1400,1400);
+
+
+                }
+
+                // FAH 4/10/2020: add Inventory list
+                else if (_listselected == "Inventory list"){
+                    double Num_Q1 = 0;
+                    double Num_Q2 = 0;
+                    double Num_Q3 = 0;
+                    double Num_Q4 = 0;
+                    pieChart.clear();
+                    _pieData.clearValues();
+                    _piedataset.clear();
+                    // Mayank 3/3/2020: setting up date ranges for profits sheet
+                    SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                    try {
+                        Q1 = DateFormat.parse("2020-01-01");
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    try {
+                        Q2 = DateFormat.parse("2020-04-01");
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    try {
+                        Q3 = DateFormat.parse("2020-07-01");
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    try {
+                        Q4 = DateFormat.parse("2020-10-01");
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    SheetRepository.getInstance().setSheetInventory();
+                    // Mayank 3/32020: getting the profits data
+                    // then add totals by monthing quater
+                    try {
+                        new ListInfo.GetData().execute().get();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    ListInfo  listinfo = ListInfo.get(getActivity());
+
+                    List<Profits> profits = listinfo.getInfo();
+
+                    for(int i = 0; i < profits.size(); i++){
+
+
+                        System.out.println(Double.parseDouble(profits.get(i).getmAmount()));
+
+                        try {
+                            CurrentDate = DateFormat.parse(profits.get(i).getmDate());
+                        } catch (ParseException e) {
+                            e.printStackTrace();}
+
+                        if (CurrentDate.after(Q1) && CurrentDate.before(Q2)){
+                            Num_Q1 = Num_Q1 + Double.parseDouble(profits.get(i).getmAmount());
+                        }
+
+                        else if (CurrentDate.after(Q2) && CurrentDate.before(Q3)){
+
+                            Num_Q2 = Num_Q2 +Double.parseDouble(profits.get(i).getmAmount());
+                        }
+
+                        else if (CurrentDate.after(Q3) && CurrentDate.before(Q4)){
+                            Num_Q3 = Num_Q3 + Double.parseDouble(profits.get(i).getmAmount());
+
+                        }
+
+                        else if (CurrentDate.after(Q4)){
+
+                            Num_Q4 = Num_Q4 + Double.parseDouble(profits.get(i).getmAmount());
+                        }
+                        else{
+
+                        }
+
+
+
+                    }
+
+                    Description desc = new Description();
+                    desc.setText("Yearly Inventory Total Cost");
+                    desc.setTextSize(30f);
+                    pieChart.setDescription(desc);
+
+                    List<PieEntry> value = new ArrayList<>();
+
+                    value.add(new PieEntry((float) Num_Q1, "Q1"));
+                    value.add(new PieEntry((float) Num_Q2, "Q2"));
+                    value.add(new PieEntry((float) Num_Q3, "Q3"));
+                    value.add(new PieEntry((float) Num_Q4, "Q4"));
+
+
+                    _piedataset = new PieDataSet(value, "Quarterly TotalCost" );
+                    _piedataset.setValueTextSize(20f);
+                    _pieData = new PieData(_piedataset);
+                    _pieData.setValueTextSize(20f);
+                    pieChart.setData(_pieData);
+
+                    _piedataset.setColors(ColorTemplate.COLORFUL_COLORS);
+
+                    pieChart.animateXY( 1400,1400);
+
 
                 }
 
