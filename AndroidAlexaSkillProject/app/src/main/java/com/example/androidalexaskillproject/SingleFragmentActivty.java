@@ -124,6 +124,12 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
 
                 return true;
 
+            case R.id.Scatter_Plot:
+                Intent ScatterChartIntent = new Intent(this, ScatterPlotReturnFragment.class);
+                startActivity(ScatterChartIntent);
+
+                return true;
+
                 default:
                     return super.onOptionsItemSelected(item);
         }
