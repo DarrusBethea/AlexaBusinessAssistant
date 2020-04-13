@@ -48,6 +48,13 @@ public class MainListFragment extends Fragment {
 
         mProfitRecyclerView = view.findViewById(R.id.profits_recycler_view);
         mProfitRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        (view.findViewById(R.id.Add_item)).setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ProfitReturnAddFragment.class);
+                startActivity(intent);
+            }
+        });
         updateUI();
         return view;
     }

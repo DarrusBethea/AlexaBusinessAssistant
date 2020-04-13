@@ -45,6 +45,8 @@
         </activity>
         <activity android:name="com.example.androidalexaskillproject.LineChartReturnFragment" >
         </activity>
+        <activity android:name="com.example.androidalexaskillproject.ScatterPlotReturnFragment" >
+        </activity>
     </application>
 
 </manifest>

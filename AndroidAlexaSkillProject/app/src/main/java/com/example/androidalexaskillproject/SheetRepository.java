@@ -93,6 +93,17 @@ public class SheetRepository {
         column_3 ="Hours Worked";
         column_4 ="Date";
     }
+
+    public void setSheetInventory() {
+        sheetName = "Inventory";
+        column_1 ="Item Name";
+        column_2 ="Quantity";
+        column_3 ="Unit Price";
+        column_4 ="Date";
+        //column_5 ="Date";
+    }
+
+
 //M.Marinaro 3/9/20 : the lack of a date as the fourth column restricts this from working
 //    public void setSheetInventory() {
 //        sheetName = "Inventory";

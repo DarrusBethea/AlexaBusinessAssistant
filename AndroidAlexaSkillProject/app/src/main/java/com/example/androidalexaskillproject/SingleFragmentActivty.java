@@ -82,6 +82,12 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
                 startActivity(EmployeeListIntent);
                 return true;
 
+            case R.id.Inventory_list:
+                SheetRepository.getInstance().setSheetInventory();
+                Intent InventoryListIntent = new Intent(this, MainListActivity.class);
+                startActivity(InventoryListIntent);
+                return true;
+
             case R.id.GrossProfit_list:
                 Intent GrossProfitListintent = new Intent(this, MainListGrossProfitActivity.class);
                 startActivity(GrossProfitListintent);
@@ -115,6 +121,12 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
             case R.id.Line_chart:
                 Intent LineChartItent = new Intent(this, LineChartReturnFragment.class);
                 startActivity(LineChartItent);
+
+                return true;
+
+            case R.id.Scatter_Plot:
+                Intent ScatterChartIntent = new Intent(this, ScatterPlotReturnFragment.class);
+                startActivity(ScatterChartIntent);
 
                 return true;
 

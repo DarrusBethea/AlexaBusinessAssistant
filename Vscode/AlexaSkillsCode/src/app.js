@@ -37,7 +37,8 @@ var NoKey = 0;
 app.setHandler({
     LAUNCH() {
       
-      this.ask("Welcome, please ask what you would like to know about your current business, from your data sheets")
+     // this.ask("Welcome, please ask what you would like to know about your current business, from your data sheets");
+     this.ask("Welcome");
     },
 
     //FAH 3/25/2020: fall back intent used if error occurs so alexa does not crash out
@@ -83,8 +84,7 @@ app.setHandler({
        this.ask(this.t('get.total') + ". is their anything else you would like to know?");
     
     },
-
-
+    
         //FAH 3/25/2020: if user asks alexa what person last name and first name is will respond with the amount they gave from the progit sheet
     async  ProfitNameSearchIntent(){
         CheckNameNum = 0;
@@ -117,7 +117,7 @@ app.setHandler({
         month = month.charAt(0).toUpperCase() + month.slice(1)
         var key = "gross exepense"
         const responsetotalexpense = await getGrossProfitSheet(month, key.toLowerCase() );
-        this.tell(responsetotalexpense +  + ". is their anything else you would like to know?");
+        this.ask(responsetotalexpense + '. is their anything else you would like to know?');
   
     },
 
@@ -167,11 +167,50 @@ app.setHandler({
        month = month.charAt(0).toUpperCase() + month.slice(1)
         var key = "total"
         const responsetotalgrossprofit = await getGrossProfitSheet(month, key.toLowerCase());
-       this.ask(responsetotalgrossprofit  + ". is their anything else you would like to know?");
+       this.ask(responsetotalgrossprofit + '. is their anything else you would like to know?');
         
       
-      
+    },
 
+
+ //FAH 3/25/2020: when user ask alexa total gross profit from the month will return back with price from gross profits sheet
+ async  ExpenseTypeIntent(){
+
+    var _expensetype = this.$inputs.expensetyperesponse.value;
+    console.log(_expensetype);
+    var CheckGammar = ""
+    for (var i = 0; i < _expensetype.length; i++) {
+    
+        CheckGammar = _expensetype[i];
+
+    }
+
+    if (CheckGammar == "s"){
+
+        _expensetype = _expensetype.substring(0, _expensetype.length - 2);
+    }
+
+    _expensetype = _expensetype.charAt(0).toUpperCase() + _expensetype.slice(1)
+    const responseexpensetype = await getSerachExpensetype(_expensetype);
+   this.ask(responseexpensetype + '. is their anything else you would like to know?');
+    
+  
+},
+
+
+
+    //AD 4/4/2020  If the user says a food name or asks how much inventory, respond with the amount of the requested item if any
+    async InventoryTotalIntent(){
+        var inventoryName = this.$inputs.food.value;
+        const inventoryResponse = await getInventoryTotal(inventoryName);
+        this.ask(inventoryResponse);
+    },
+
+    //AD 4/4/2020 Get the hours worked for an employee
+    async HoursWorkedIntent(){
+        var workerName = this.$inputs.person.value;
+        const workerResponse = await getHoursWorked(workerName);
+        this.ask(workerResponse);
     },
 
     MyNameIsIntent() {
@@ -205,6 +244,8 @@ app.setHandler({
       
      
      },
+
+
 
      //FAH 3/25/2020: ends convo with alexa
      EndTalkIntent(){
@@ -303,6 +344,107 @@ async function getSerachNameProfitSheet( Firstname, Lastname) {
              CheckNameNum = 0;
     return "Sorry that person was not found";
 }
+
+//AD Method that searches through the employees sheet to find an employee matching the requested name. TODO: Add case handling for employees that are not in the system.  
+async function getHoursWorked( person ) {
+
+    var StringSplitHours = "";
+    var name = person.split(" ");
+
+    
+    const options = {
+
+        uri: 'https://script.google.com/macros/s/AKfycbzRJecRXqinxLQxHRix6F3JmjHso5NyxNgXABdWrDIhwjM4UvY/exec?id=1KE91K1eYxlfSV9gHfI1LBNaCtAS_c-o8rTF92NlEWvg&sheet=employees',
+       json: true // Automatically parses the JSON string in the response
+    };
+
+    const data = await requestPromise(options);
+    var myJSON = JSON.stringify(data);
+    var StringSplit = myJSON.split(",");
+
+    var hours = 0;
+
+    for (var i = 0; i < StringSplit.length; i++) {
+        if (StringSplit[i].toUpperCase().includes(name[0].toUpperCase()) == true && StringSplit[i+1].toUpperCase().includes(name[1].toUpperCase()) == true){
+            StringSplitHours = StringSplit[i + 2].split(":");
+	    StringSplitHours = StringSplitHours[1];
+	    hours = StringSplitHours;
+        }
+
+    }
+
+    return person + " worked " + hours + " hours.";
+
+}
+
+//AD 4/04/2020 Method to tally the amount of a inventory product that we have.
+async function getInventoryTotal( foodname ) {
+
+    var StringSplitInventory = "";
+    const options = {
+
+        uri: 'https://script.google.com/macros/s/AKfycbzRJecRXqinxLQxHRix6F3JmjHso5NyxNgXABdWrDIhwjM4UvY/exec?id=1KE91K1eYxlfSV9gHfI1LBNaCtAS_c-o8rTF92NlEWvg&sheet=Inventory',
+       json: true // Automatically parses the JSON string in the response
+    };
+
+    const data = await requestPromise(options);
+    var myJSON = JSON.stringify(data);
+    var StringSplit = myJSON.split(",");
+
+    var total = 0;
+    
+    for (var i = 0; i < StringSplit.length; i++) {
+        if (StringSplit[i].includes(foodname) == true){	    
+	    StringSplitInventory =StringSplit[i + 1].split(":");
+            StringSplitInventory = StringSplitInventory[1];
+	    total = total + parseInt(StringSplitInventory);
+	    //return "We have " + StringSplitInventory + " " + foodname + " left";
+	}
+	
+    }
+
+    if(total = 0){
+	return "We do not have any " + foodname;
+    } else {
+	return "We have " + total + " " + foodname + " left.";    
+    }
+    
+}
+
+// who gave use the most money
+// what was most are money spent on
+//
+
+//FAH 3/25/2020: searchers through the ezpense type  in exepnses sheet and tells you the total amount of money spent on expense type
+async function getSerachExpensetype( Expenstype) {
+
+    var StringSplitExpenseTypePrice = "";
+    var PriceSpent = 0;
+    
+    const options = {
+       
+        uri: 'https://script.google.com/macros/s/AKfycbzRJecRXqinxLQxHRix6F3JmjHso5NyxNgXABdWrDIhwjM4UvY/exec?id=1KE91K1eYxlfSV9gHfI1LBNaCtAS_c-o8rTF92NlEWvg&sheet=expenses',
+       json: true // Automatically parses the JSON string in the response
+    };
+    const data = await requestPromise(options);
+    var myJSON = JSON.stringify(data);
+    var StringSplit = myJSON.split(",");
+    console.log( myJSON);
+     for (var i = 0; i < StringSplit.length; i++) {
+
+        if (StringSplit[i].includes(Expenstype) == true && StringSplit[i].includes('ExpenseType') == true){
+           
+            StringSplitExpenseTypePrice =StringSplit[i + 1].split(":");
+            PriceSpent = PriceSpent + parseInt(StringSplitExpenseTypePrice[1]);
+        }
+             }
+
+             PriceSpent = PriceSpent * -1;
+
+    return "The amount that was spent on "+ Expenstype + " supplies was, " + PriceSpent + " dollars";
+}
+
+
 
 
 
