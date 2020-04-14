@@ -117,7 +117,7 @@ public class MainListFragment extends Fragment {
         public void bind(Profits profit) {
             mProfit = profit;
             mNameProfits.setText(mProfit.getmName());
-            MValueProfits.setText(mProfit.getmAmount());
+            MValueProfits.setText(mProfit.getmAmount()+SheetRepository.getInstance().getUnits()); //M.Marinaro 4/13/20 : Include the units for the value
             mLastnameProfits.setText(mProfit.getmLastname());
             mDateProfits.setText(mProfit.getmDate());
 

@@ -22,6 +22,7 @@ public class SheetRepository {
     private String column_2;    //                      These are just the text names of the columns, NOT the variable names on the sheets
     private String column_3;
     private String column_4;
+    private String units;       //M.Marinaro 4/13/20 : Units for the value related column in each sheet (currently the second to last)
 
 
 
@@ -66,6 +67,10 @@ public class SheetRepository {
         return column_4;
     }
 
+    public String getUnits() {
+        return units;
+    }
+
 
 
     //TODO These set methods should be turned into arraylists stored in a list within the repository
@@ -76,6 +81,7 @@ public class SheetRepository {
         column_2 ="Last Name";
         column_3 ="Profits Amount";
         column_4 ="Date";
+        units = " $";
     }
 
     public void setSheetExpenses() {
@@ -84,6 +90,7 @@ public class SheetRepository {
         column_2 ="Type";
         column_3 ="Expense Amount";
         column_4 ="Date";
+        units = " $";
     }
 
     public void setSheetEmployees() {
@@ -92,6 +99,7 @@ public class SheetRepository {
         column_2 ="Last Name";
         column_3 ="Hours Worked";
         column_4 ="Date";
+        units = " hrs";
     }
 
     public void setSheetInventory() {
@@ -100,7 +108,7 @@ public class SheetRepository {
         column_2 ="Quantity";
         column_3 ="Unit Price";
         column_4 ="Date";
-        //column_5 ="Date";
+        units = " ";
     }
 
 
