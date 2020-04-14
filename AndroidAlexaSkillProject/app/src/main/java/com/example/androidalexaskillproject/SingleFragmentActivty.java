@@ -105,27 +105,36 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
                 return true;
 
             case R.id.Pie_chart:
-                Toast.makeText(this, "pie selected", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "pie chart selected", Toast.LENGTH_SHORT).show();
                 Intent PieChartItent = new Intent(this, PieChartReturnFragment.class);
                 startActivity(PieChartItent);
 
                 return true;
 
             case R.id.Bar_chart:
-                Toast.makeText(this, "pie selected", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "bar chart selected", Toast.LENGTH_SHORT).show();
                 Intent BarChartItent = new Intent(this, BarChartReturnFragment.class);
                 startActivity(BarChartItent);
 
                 return true;
 
             case R.id.Line_chart:
+                Toast.makeText(this, "line chart selected", Toast.LENGTH_SHORT).show();
                 Intent LineChartItent = new Intent(this, LineChartReturnFragment.class);
                 startActivity(LineChartItent);
 
+                return true;
 
-            case R.id.Signin_opition:
+            case R.id.SignIn_option:
                 Intent SigninIntent = new Intent(this, LoginScreenReturnFragment.class);
                 startActivity(SigninIntent);
+
+                return true;
+
+            case R.id.loginButton:
+                Toast.makeText(this, "login successful", Toast.LENGTH_SHORT).show();
+                //Intent loginIntent = new Intent(this, HomeScreenReturnFragment.class);
+                //startActivity(loginIntent);
 
                 return true;
 

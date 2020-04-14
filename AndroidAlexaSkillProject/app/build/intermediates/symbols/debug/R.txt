@@ -1055,7 +1055,7 @@ int id Pie_chart 0x7f0a000e
 int id Profits_list 0x7f0a000f
 int id SHIFT 0x7f0a0010
 int id SYM 0x7f0a0011
-int id Signin_opition 0x7f0a0012
+int id SignIn_option 0x7f0a0012
 int id action_bar 0x7f0a0013
 int id action_bar_activity_content 0x7f0a0014
 int id action_bar_container 0x7f0a0015

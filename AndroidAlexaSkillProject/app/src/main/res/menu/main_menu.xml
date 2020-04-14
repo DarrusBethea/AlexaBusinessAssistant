@@ -56,7 +56,7 @@
         <menu>
 
 
-            <item android:id="@+id/Signin_opition"
+            <item android:id="@+id/SignIn_option"
                 android:title="Sign In"/>
 
 
