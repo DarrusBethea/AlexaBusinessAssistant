@@ -41,10 +41,14 @@ public class MainListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-
+        TextView mTitleBar;
 
         View view = inflater.inflate(R.layout.main_list_fragment, container, false);
+
+        //M Marinaro 4/13/20 : Set the title bar in the list view so users know what list their viewing.
+        mTitleBar = view.findViewById(R.id.title_bar);
+        mTitleBar.setText(SheetRepository.getInstance().getSheetName());
+
 
         mProfitRecyclerView = view.findViewById(R.id.profits_recycler_view);
         mProfitRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
