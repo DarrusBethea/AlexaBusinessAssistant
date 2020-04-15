@@ -1056,7 +1056,7 @@ id Pie_chart
 id Profits_list
 id SHIFT
 id SYM
-id SignIn_option
+id Signin_opition
 id action_bar
 id action_bar_activity_content
 id action_bar_container

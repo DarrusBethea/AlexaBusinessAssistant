@@ -5147,7 +5147,7 @@ public final class R {
     public static final int Profits_list=0x7f0a000f;
     public static final int SHIFT=0x7f0a0010;
     public static final int SYM=0x7f0a0011;
-    public static final int SignIn_option=0x7f0a0012;
+    public static final int Signin_opition=0x7f0a0012;
     public static final int action_bar=0x7f0a0013;
     public static final int action_bar_activity_content=0x7f0a0014;
     public static final int action_bar_container=0x7f0a0015;
