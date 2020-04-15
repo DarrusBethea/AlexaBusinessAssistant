@@ -42,6 +42,12 @@
         <activity android:name=".LineChartReturnFragment">
         </activity>
 
+        <activity android:name=".ScatterPlotReturnFragment">
+        </activity>
+
+        <activity android:name=".LoginScreenReturnFragment">
+        </activity>
+
     </application>
 
 </manifest>

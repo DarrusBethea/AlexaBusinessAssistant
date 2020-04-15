@@ -43,7 +43,8 @@
             <item android:id="@+id/Line_chart"
                 android:title="Line Chart"/>
 
-
+            <item android:id="@+id/Scatter_Plot"
+                android:title="Scatter Plot"/>
 
         </menu>menu>
     </item>

@@ -124,7 +124,19 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
 
                 return true;
 
-                default:
+            case R.id.Scatter_Plot:
+                Intent ScatterChartIntent = new Intent(this, ScatterPlotReturnFragment.class);
+                startActivity(ScatterChartIntent);
+
+                return true;
+
+            case R.id.Signin_opition:
+                Intent SigninIntent = new Intent(this, LoginScreenReturnFragment.class);
+                startActivity(SigninIntent);
+
+                return true;
+
+            default:
                     return super.onOptionsItemSelected(item);
         }
 
