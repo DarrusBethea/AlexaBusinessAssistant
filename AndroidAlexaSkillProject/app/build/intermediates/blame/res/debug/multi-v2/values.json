@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\fran\\Desktop\\mayank last branch\\AlexaBusinessAssistant-master\\AndroidAlexaSkillProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\fran\\Desktop\\AlexaBusinessAssistant-William\\AndroidAlexaSkillProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\3ec6fa8458ddbe732478393a9f9e6c77\\constraintlayout-1.1.3\\res\\values\\values.xml",
@@ -23,6 +23,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\fran\\Desktop\\AlexaBusinessAssistant-William\\AndroidAlexaSkillProject\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "12,4,2,3,9,7,6,10",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "380,155,55,102,290,245,202,333",
+                        "endColumns": "39,45,46,52,42,43,42,45",
+                        "endOffsets": "415,196,97,150,328,284,240,374"
+                    },
+                    "to": {
+                        "startLines": "187,200,201,202,218,223,224,263",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "9247,10177,10223,10270,11366,11675,11719,14252",
+                        "endColumns": "39,45,46,52,42,43,42,45",
+                        "endOffsets": "9282,10218,10265,10318,11404,11714,11757,14293"
+                    }
+                },
+                {
                     "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\8f8ab13dc8f4e84e14a8bb3d9ac92bc4\\core-1.0.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,171,172,176,177,178,6,13,56,88,125",
@@ -39,6 +56,25 @@
                         "endLines": "247,248,348,349,350,351,352,353,354,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,485,486,494,495,507,508,509,510,511,515,537,596,2289,2293,2294,2298,2299,2661,2662,3729,3929,3961,3999,4006",
                         "endColumns": "68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24",
                         "endOffsets": "13185,13248,20057,20125,20197,20267,20328,20402,20475,27360,27421,27483,27547,27609,27670,27738,27838,27898,27964,28037,28106,28163,28215,28277,28802,28878,29258,29293,29883,29944,30001,30035,30070,30248,31529,36492,149569,149770,149880,150081,150210,174488,174555,235763,254011,256076,258038,258415"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\fran\\Desktop\\AlexaBusinessAssistant-William\\AndroidAlexaSkillProject\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "54",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "368"
+                    },
+                    "to": {
+                        "startLines": "607",
+                        "startColumns": "4",
+                        "startOffsets": "37259",
+                        "endLines": "612",
+                        "endColumns": "12",
+                        "endOffsets": "37573"
                     }
                 },
                 {
@@ -75,25 +111,6 @@
                         "startOffsets": "29088,29418,29557,29604,29659,30253,30307,30359,30408,30469",
                         "endColumns": "39,42,46,54,44,53,51,48,60,49",
                         "endOffsets": "29123,29456,29599,29654,29699,30302,30354,30403,30464,30514"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\fran\\Desktop\\mayank last branch\\AlexaBusinessAssistant-master\\AndroidAlexaSkillProject\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "3,1,11,12,13,14,15",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "79,16,244,290,347,395,441",
-                        "endLines": "9,1,11,12,13,14,15",
-                        "endColumns": "19,61,45,56,47,45,42",
-                        "endOffsets": "238,73,285,342,390,436,479"
-                    },
-                    "to": {
-                        "startLines": "2,577,582,583,584,585,597",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "150,34292,34826,34872,34929,34977,36497",
-                        "endLines": "8,577,582,583,584,585,597",
-                        "endColumns": "19,61,45,56,47,45,42",
-                        "endOffsets": "309,34349,34867,34924,34972,35018,36535"
                     }
                 },
                 {
@@ -135,6 +152,25 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\fran\\Desktop\\AlexaBusinessAssistant-William\\AndroidAlexaSkillProject\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "3,1,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "79,16,244,290,347,395,441",
+                        "endLines": "9,1,11,12,13,14,15",
+                        "endColumns": "19,61,45,56,47,45,42",
+                        "endOffsets": "238,73,285,342,390,436,479"
+                    },
+                    "to": {
+                        "startLines": "2,577,582,583,584,585,597",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "150,34292,34826,34872,34929,34977,36497",
+                        "endLines": "8,577,582,583,584,585,597",
+                        "endColumns": "19,61,45,56,47,45,42",
+                        "endOffsets": "309,34349,34867,34924,34972,35018,36535"
+                    }
+                },
+                {
                     "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\4fe44ae24daa7cfa2dd483a5d3b65a2f\\cardview-1.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,35,36,37,38,45,47,50,7",
@@ -151,42 +187,6 @@
                         "endLines": "22,196,197,198,199,345,346,347,640,2029,2032,2035,3669",
                         "endColumns": "51,60,61,61,63,58,56,53,12,12,12,12,24",
                         "endOffsets": "945,9984,10046,10108,10172,19876,19933,19987,39438,129657,129783,129911,231359"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\fran\\Desktop\\mayank last branch\\AlexaBusinessAssistant-master\\AndroidAlexaSkillProject\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "12,4,2,3,9,7,6,10",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "380,155,55,102,290,245,202,333",
-                        "endColumns": "39,45,46,52,42,43,42,45",
-                        "endOffsets": "415,196,97,150,328,284,240,374"
-                    },
-                    "to": {
-                        "startLines": "187,200,201,202,218,223,224,263",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "9247,10177,10223,10270,11366,11675,11719,14252",
-                        "endColumns": "39,45,46,52,42,43,42,45",
-                        "endOffsets": "9282,10218,10265,10318,11404,11714,11757,14293"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\fran\\Desktop\\mayank last branch\\AlexaBusinessAssistant-master\\AndroidAlexaSkillProject\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "54",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "368"
-                    },
-                    "to": {
-                        "startLines": "607",
-                        "startColumns": "4",
-                        "startOffsets": "37259",
-                        "endLines": "612",
-                        "endColumns": "12",
-                        "endOffsets": "37573"
                     }
                 },
                 {

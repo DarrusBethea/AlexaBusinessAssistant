@@ -245,6 +245,62 @@ app.setHandler({
      
      },
 
+    // Will: get Q1 total spendings
+    quarterOneExpensesIntent() {
+        this.ask(this.t('get.quarterOneExpense')  + ". is their anything else you would like to know?");
+      
+     
+     }, 
+
+    // Will: get Q2 total spendings
+    quarterTwoExpensesIntent() {
+        this.ask(this.t('get.quarterTwoExpense')  + ". is their anything else you would like to know?");
+      
+     
+     },
+     
+    // Will: get Q3 total spendings
+    quarterThreeExpensesIntent() {
+        this.ask(this.t('get.quarterThreeExpense')  + ". is their anything else you would like to know?");
+      
+     
+     }, 
+
+    // Will: get Q4 total spendings
+    quarterFourExpensesIntent() {
+        this.ask(this.t('get.quarterFourExpense')  + ". is their anything else you would like to know?");
+      
+     
+     },
+
+
+    // Will: gets the person with the highest profit
+    ProfitPersonMostIntent() {
+        this.ask(this.t('get.personmostmoney')  + ". is their anything else you would like to know?");
+      
+     
+     },
+
+    // Will: gets the person with the least profit
+    ProfitPersonLessIntent() {
+        this.ask(this.t('get.personlessmoney')  + ". is their anything else you would like to know?");
+      
+     
+     },
+
+    // Will: gets the total gross profit
+    TotalGrossProfitIntent() {
+            this.ask(this.t('get.totalgrossprofit')  + ". is their anything else you would like to know?");
+          
+         
+     },
+
+    // Will: gets the total expenses 
+    TotalExpensesIntent() {
+            this.ask(this.t('get.totalexpenses')  + ". is their anything else you would like to know?");
+          
+         
+     }, 
 
 
      //FAH 3/25/2020: ends convo with alexa
