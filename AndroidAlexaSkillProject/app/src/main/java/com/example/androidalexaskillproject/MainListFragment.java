@@ -48,6 +48,13 @@ public class MainListFragment extends Fragment {
 
         mProfitRecyclerView = view.findViewById(R.id.profits_recycler_view);
         mProfitRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        (view.findViewById(R.id.Add_item)).setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ProfitReturnAddFragment.class);
+                startActivity(intent);
+            }
+        });
         updateUI();
         return view;
     }
@@ -94,7 +101,10 @@ public class MainListFragment extends Fragment {
             mLastnameProfits = itemView.findViewById(R.id.list_profits_lastname);
             mDateProfits = itemView.findViewById(R.id.list_profit_date);
             mDeleteImage = itemView.findViewById(R.id.profit_image_delete_list);
-            mAddImage = itemView.findViewById(R.id.profit_image_add_list);
+
+            //Removed this from the view card and made this a general add button on the top bar
+            //mAddImage = itemView.findViewById(R.id.profit_image_add_list);
+
             mEditImage = itemView.findViewById(R.id.profit_image_edit_list);
 
 
@@ -158,14 +168,15 @@ public class MainListFragment extends Fragment {
                 }
             });
 
-            holder.mAddImage.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), ProfitReturnAddFragment.class);
-
-                    startActivity(intent);
-                }
-            });
+            //M.Marinaro 3/8/20 : Add button moved to top bar
+//            holder.mAddImage.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent intent = new Intent(getActivity(), ProfitReturnAddFragment.class);
+//
+//                    startActivity(intent);
+//                }
+//            });
 
             holder.mEditImage.setOnClickListener(new View.OnClickListener() {
                 @Override

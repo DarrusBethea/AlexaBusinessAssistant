@@ -59,14 +59,45 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
                 Toast.makeText(this, "drop down menu selected", Toast.LENGTH_SHORT).show();
                 return true;
 
-            case R.id.Profit_list:
-
+            case R.id.Profits_list:
+                //M.Marinaro 3/4/20 : By selecting this menu item the current sheet name is changed
+                SheetRepository.getInstance().setSheetProfits();
+                //M.Marinaro 3/4/20 : Then refresh the page
                 Intent ProfitListintent = new Intent(this, MainListActivity.class);
                 startActivity(ProfitListintent);
                 return true;
 
-            case R.id.subitem2_list:
-                Toast.makeText(this, "Item 2 selected", Toast.LENGTH_SHORT).show();
+            //M.Marinaro 3/4/20 : Same Here
+            case R.id.Expenses_list:
+                SheetRepository.getInstance().setSheetExpenses();
+                Intent ExpensesListIntent = new Intent(this, MainListActivity.class);
+                startActivity(ExpensesListIntent);
+                return true;
+
+
+            //M.Marinaro 3/9/20 : Option to select the employees list
+            case R.id.Employees_list:
+                SheetRepository.getInstance().setSheetEmployees();
+                Intent EmployeeListIntent = new Intent(this, MainListActivity.class);
+                startActivity(EmployeeListIntent);
+                return true;
+
+            case R.id.Inventory_list:
+                SheetRepository.getInstance().setSheetInventory();
+                Intent InventoryListIntent = new Intent(this, MainListActivity.class);
+                startActivity(InventoryListIntent);
+                return true;
+
+            case R.id.GrossProfit_list:
+                Intent GrossProfitListintent = new Intent(this, MainListGrossProfitActivity.class);
+                startActivity(GrossProfitListintent);
+                return true;
+
+
+            //M.Marinaro 3/9/20 : General Add Button
+            case R.id.Add_item:
+                Intent AddItemintent = new Intent(this, ProfitReturnAddFragment.class);
+                startActivity(AddItemintent);
                 return true;
 
             case R.id.select_stats:
@@ -84,6 +115,18 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
                 Toast.makeText(this, "pie selected", Toast.LENGTH_SHORT).show();
                 Intent BarChartItent = new Intent(this, BarChartReturnFragment.class);
                 startActivity(BarChartItent);
+
+                return true;
+
+            case R.id.Line_chart:
+                Intent LineChartItent = new Intent(this, LineChartReturnFragment.class);
+                startActivity(LineChartItent);
+
+                return true;
+
+            case R.id.Scatter_Plot:
+                Intent ScatterChartIntent = new Intent(this, ScatterPlotReturnFragment.class);
+                startActivity(ScatterChartIntent);
 
                 return true;
 
