@@ -34,11 +34,6 @@ public class MainListFragment extends Fragment {
     private MainAdapter mAdapter;
 
 
-    // public ImageView mDeleteImage;
-
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         TextView mTitleBar;
@@ -64,7 +59,9 @@ public class MainListFragment extends Fragment {
     }
 
     private void updateUI() {
-
+        // FAH 4/17/2020: calling the list method to excute to get
+        // the data from the sheets when once all data has been retrive,
+        // ui will add it to the list
         try {
             new ListInfo.GetData().execute().get();
         } catch (ExecutionException e) {
@@ -163,6 +160,8 @@ public class MainListFragment extends Fragment {
             holder.mDeleteImage.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    // FAH 4/17/2020: put extra takes the info, when the user clicks on the delete the button,
+                    // then sends that info to the new intent
                     Intent intent = new Intent(getActivity(), MainActivity.class);
                     intent.putExtra("delete_name",profit.getmName() );
                     intent.putExtra("delete_last_name",profit.getmLastname() );

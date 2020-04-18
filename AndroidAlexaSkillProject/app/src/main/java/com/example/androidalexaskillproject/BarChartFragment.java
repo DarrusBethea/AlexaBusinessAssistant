@@ -68,6 +68,7 @@ public class BarChartFragment extends Fragment {
 
 
         // Mayank 3/3/2020: add more list here for pie chart
+        // FAH 4/10/2020: add employee list and inventory list.
         String[] items = new String[]{
                 "profits list", "expense list", "employee list", "Inventory list"
         };
@@ -334,7 +335,7 @@ public class BarChartFragment extends Fragment {
                     Num_Q3 = 0;
                     Num_Q4 = 0;
 
-                    // Mayank 3/3/2020: setting up date ranges for profits sheet
+
                     SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd");
                     try {
                         Q1 = DateFormat.parse("2020-01-01");
@@ -361,8 +362,6 @@ public class BarChartFragment extends Fragment {
                     }
 
 
-                    // Mayank 3/32020: getting the profits data
-                    // then add totals by monthing quater
 
                     try {
                         new ListInfo.GetData().execute().get();
@@ -413,13 +412,11 @@ public class BarChartFragment extends Fragment {
 
                     }
 
-                    //Mayank 3.3.2020: creating description for Profits pie chart
                     Description desc = new Description();
                     desc.setText("Yearly Hours Worked");
                     desc.setTextSize(10f);
                     barChart.setDescription(desc);
 
-                    // Mayank 3/2/2020: adding quater values to list
 
                     ArrayList<BarEntry> value = new ArrayList<BarEntry>();
                     value.add(new BarEntry(0, (float) Num_Q1,"Q1"));
@@ -427,7 +424,6 @@ public class BarChartFragment extends Fragment {
                     value.add(new BarEntry(2, (float) Num_Q3, "Q3"));
                     value.add(new BarEntry(3, (float) Num_Q4, "Q4"));
 
-                    //Mayank 3/2/2020: setting data values
                     BarDataSet _bardataset = new BarDataSet(value, "Quarterly Hours" );
                     _bardataset.setColors(ColorTemplate.VORDIPLOM_COLORS);
                     _bardataset.setValueTextSize(20f);
@@ -437,7 +433,6 @@ public class BarChartFragment extends Fragment {
 
 
 
-                    // Mayank3/2/2020: setting Xaxis values
                     String[] months = new String[] {"Q1", "Q2", "Q3", "Q4"};
                     XAxis  xaxis = barChart.getXAxis();
 
@@ -454,7 +449,7 @@ public class BarChartFragment extends Fragment {
                 }
 
 
-                //FAH2/10/2020: added incventory list
+                //FAH2/10/2020: added Inventory list
                 else if (_listselected == "Inventory list"){
                     SheetRepository.getInstance().setSheetInventory();
                     Num_Q1 = 0;
@@ -462,7 +457,7 @@ public class BarChartFragment extends Fragment {
                     Num_Q3 = 0;
                     Num_Q4 = 0;
 
-                    // Mayank 3/3/2020: setting up date ranges for profits sheet
+
                     SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd");
                     try {
                         Q1 = DateFormat.parse("2020-01-01");
@@ -489,8 +484,7 @@ public class BarChartFragment extends Fragment {
                     }
 
 
-                    // Mayank 3/32020: getting the profits data
-                    // then add totals by monthing quater
+
 
                     try {
                         new ListInfo.GetData().execute().get();
@@ -541,13 +535,11 @@ public class BarChartFragment extends Fragment {
 
                     }
 
-                    //Mayank 3.3.2020: creating description for Profits pie chart
+
                     Description desc = new Description();
                     desc.setText("Yearly Inventory Total Cost");
                     desc.setTextSize(10f);
                     barChart.setDescription(desc);
-
-                    // Mayank 3/2/2020: adding quater values to list
 
                     ArrayList<BarEntry> value = new ArrayList<BarEntry>();
                     value.add(new BarEntry(0, (float) Num_Q1,"Q1"));
@@ -555,7 +547,6 @@ public class BarChartFragment extends Fragment {
                     value.add(new BarEntry(2, (float) Num_Q3, "Q3"));
                     value.add(new BarEntry(3, (float) Num_Q4, "Q4"));
 
-                    //Mayank 3/2/2020: setting data values
                     BarDataSet _bardataset = new BarDataSet(value, "Quarterly TotalCost" );
                     _bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
                     _bardataset.setValueTextSize(20f);
@@ -563,9 +554,6 @@ public class BarChartFragment extends Fragment {
                     BarData _barData = new BarData(_bardataset);
                     barChart.setData(_barData);
 
-
-
-                    // Mayank3/2/2020: setting Xaxis values
                     String[] months = new String[] {"Q1", "Q2", "Q3", "Q4"};
                     XAxis  xaxis = barChart.getXAxis();
 

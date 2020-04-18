@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\fran\\Desktop\\New folder (14)\\AlexaBusinessAssistant-Francis\\AndroidAlexaSkillProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\fran\\Desktop\\comments folder\\AlexaBusinessAssistant-Francis\\AndroidAlexaSkillProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\fran\\.gradle\\caches\\transforms-2\\files-2.1\\3ec6fa8458ddbe732478393a9f9e6c77\\constraintlayout-1.1.3\\res\\values\\values.xml",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\fran\\Desktop\\New folder (14)\\AlexaBusinessAssistant-Francis\\AndroidAlexaSkillProject\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\fran\\Desktop\\comments folder\\AlexaBusinessAssistant-Francis\\AndroidAlexaSkillProject\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "12,4,2,3,9,7,6,10",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -37,25 +37,6 @@
                         "startOffsets": "9247,10177,10223,10270,11366,11675,11719,14252",
                         "endColumns": "39,45,46,52,42,43,42,45",
                         "endOffsets": "9282,10218,10265,10318,11404,11714,11757,14293"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\fran\\Desktop\\New folder (14)\\AlexaBusinessAssistant-Francis\\AndroidAlexaSkillProject\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "54",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "368"
-                    },
-                    "to": {
-                        "startLines": "608",
-                        "startColumns": "4",
-                        "startOffsets": "37307",
-                        "endLines": "613",
-                        "endColumns": "12",
-                        "endOffsets": "37621"
                     }
                 },
                 {
@@ -75,6 +56,25 @@
                         "endLines": "247,248,348,349,350,351,352,353,354,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,485,486,494,495,507,508,509,510,511,515,537,596,2290,2294,2295,2299,2300,2662,2663,3730,3930,3962,4000,4007",
                         "endColumns": "68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24",
                         "endOffsets": "13185,13248,20057,20125,20197,20267,20328,20402,20475,27360,27421,27483,27547,27609,27670,27738,27838,27898,27964,28037,28106,28163,28215,28277,28802,28878,29258,29293,29883,29944,30001,30035,30070,30248,31529,36492,149617,149818,149928,150129,150258,174536,174603,235811,254059,256124,258086,258463"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\fran\\Desktop\\comments folder\\AlexaBusinessAssistant-Francis\\AndroidAlexaSkillProject\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "3,1,11,12,13,14,16,15",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "79,16,244,290,347,395,489,441",
+                        "endLines": "9,1,11,12,13,14,16,15",
+                        "endColumns": "19,61,45,56,47,45,42,47",
+                        "endOffsets": "238,73,285,342,390,436,527,484"
+                    },
+                    "to": {
+                        "startLines": "2,577,582,583,584,585,597,598",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "150,34292,34826,34872,34929,34977,36497,36540",
+                        "endLines": "8,577,582,583,584,585,597,598",
+                        "endColumns": "19,61,45,56,47,45,42,47",
+                        "endOffsets": "309,34349,34867,34924,34972,35018,36535,36583"
                     }
                 },
                 {
@@ -171,22 +171,22 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\fran\\Desktop\\New folder (14)\\AlexaBusinessAssistant-Francis\\AndroidAlexaSkillProject\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\fran\\Desktop\\comments folder\\AlexaBusinessAssistant-Francis\\AndroidAlexaSkillProject\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
-                        "startLines": "3,1,11,12,13,14,16,15",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "79,16,244,290,347,395,489,441",
-                        "endLines": "9,1,11,12,13,14,16,15",
-                        "endColumns": "19,61,45,56,47,45,42,47",
-                        "endOffsets": "238,73,285,342,390,436,527,484"
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "54",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "368"
                     },
                     "to": {
-                        "startLines": "2,577,582,583,584,585,597,598",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "150,34292,34826,34872,34929,34977,36497,36540",
-                        "endLines": "8,577,582,583,584,585,597,598",
-                        "endColumns": "19,61,45,56,47,45,42,47",
-                        "endOffsets": "309,34349,34867,34924,34972,35018,36535,36583"
+                        "startLines": "608",
+                        "startColumns": "4",
+                        "startOffsets": "37307",
+                        "endLines": "613",
+                        "endColumns": "12",
+                        "endOffsets": "37621"
                     }
                 },
                 {

@@ -69,6 +69,7 @@ public class LineChartFragment extends Fragment {
 
 
         // Mayank 3/3/2020: add more list here for pie chart
+        // FAH 4/10/2020: add employee list and inventory list.
         String[] items = new String[]{
                 "profits list", "expense list","employee list", "Inventory list"
         };
@@ -301,7 +302,7 @@ public class LineChartFragment extends Fragment {
                     double Num_Q3 = 0;
                     double Num_Q4 = 0;
 
-                    // Mayank 3/3/2020: setting up date ranges for profits sheet
+
                     SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd");
                     try {
                         Q1 = DateFormat.parse("2020-01-01");
@@ -328,8 +329,7 @@ public class LineChartFragment extends Fragment {
                     }
 
                     SheetRepository.getInstance().setSheetEmployees();
-                    // Mayank 3/32020: getting the profits data
-                    // then add totals by monthing quater
+
                     try {
                         new ListInfo.GetData().execute().get();
                     } catch (ExecutionException e) {
@@ -374,7 +374,7 @@ public class LineChartFragment extends Fragment {
 
                     }
 
-                    //Mayank 3.3.2020: creating description for Profits pie chart
+
                     Description desc = new Description();
                     desc.setText("Yearly Hours Worked");
                     desc.setTextSize(30f);
@@ -397,7 +397,7 @@ public class LineChartFragment extends Fragment {
 
                 }
 
-                //FAH2/10/2020: added incventory list
+                //FAH2/10/2020: added Inventory list
                 else if (_listselected  == "Inventory list"){
 
                     double Num_Q1 = 0;
@@ -405,7 +405,7 @@ public class LineChartFragment extends Fragment {
                     double Num_Q3 = 0;
                     double Num_Q4 = 0;
 
-                    // Mayank 3/3/2020: setting up date ranges for profits sheet
+
                     SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd");
                     try {
                         Q1 = DateFormat.parse("2020-01-01");
@@ -432,8 +432,8 @@ public class LineChartFragment extends Fragment {
                     }
 
                     SheetRepository.getInstance().setSheetInventory();
-                    // Mayank 3/32020: getting the profits data
-                    // then add totals by monthing quater
+
+
                     try {
                         new ListInfo.GetData().execute().get();
                     } catch (ExecutionException e) {
@@ -478,7 +478,7 @@ public class LineChartFragment extends Fragment {
 
                     }
 
-                    //Mayank 3.3.2020: creating description for Profits pie chart
+
                     Description desc = new Description();
                     desc.setText("Yearly Inventory Total Cost");
                     desc.setTextSize(30f);

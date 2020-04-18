@@ -30,26 +30,19 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class GrossProfitMainList extends Fragment {
+
+    // FAH 4/17/2020 : this class is to organize all the data in the list view for the gross profit list.
     private RecyclerView mProfitRecyclerView;
 
     private MainAdapter mAdapter;
 
     Spinner  GrossProfitspinner;
 
-
     String _listselected = "";
-
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-
-
-
-
-
-
 
 
         View view = inflater.inflate(R.layout.grossprofit_mainlist_fragment, container, false);
@@ -62,7 +55,6 @@ public class GrossProfitMainList extends Fragment {
                 "Yearly Profits", "Yearly Expenses", "Yearly Total"
         };
         GrossProfitspinner = (Spinner) view.findViewById(R.id.grossprofit_spinner);
-        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, items);
         ArrayAdapter<String> adapter = new ArrayAdapter< String>(this.getActivity(),
                 android.R.layout.simple_spinner_item, items);
         GrossProfitspinner.setAdapter(adapter);
@@ -75,6 +67,8 @@ public class GrossProfitMainList extends Fragment {
                 ((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
                 _listselected =  (String) parent.getItemAtPosition(position);
 
+                // FAH 4/17/2020: setting the spinner to one grabs the info needed
+                // to the yearly profits, collumn.
                 if (_listselected  == "Yearly Profits"){
 
                     GrossProfit.setSpinnerChange(1);
@@ -83,7 +77,6 @@ public class GrossProfitMainList extends Fragment {
 
 
 
-                //TODO Mayank 3/32020: add next list data here when it is created
                 else if (_listselected == "Yearly Expenses"){
 
                     GrossProfit.setSpinnerChange(2);
@@ -112,16 +105,10 @@ public class GrossProfitMainList extends Fragment {
 
 
 
-
-
-
-
-
-
-
-
         return view;
     }
+
+
 
     private void updateUI() {
 
@@ -152,7 +139,6 @@ public class GrossProfitMainList extends Fragment {
 
         private TextView MMonthGrossProfits;
 
-
         private GrossProfit mGrossProfit;
 
         public Viewholder(LayoutInflater inflater, ViewGroup parent) {
@@ -175,13 +161,7 @@ public class GrossProfitMainList extends Fragment {
         public void onClick(View v) {
 
         }
-
-
-
-
     }
-
-
 
     private class MainAdapter extends RecyclerView.Adapter<Viewholder> {
         private List<GrossProfit> mGrossProfit;

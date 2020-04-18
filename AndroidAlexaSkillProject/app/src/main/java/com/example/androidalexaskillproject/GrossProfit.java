@@ -1,7 +1,8 @@
 package com.example.androidalexaskillproject;
 
 public class GrossProfit {
-
+// FAH 4/17/2020: this is the gross profits class getter and setters,
+    // used for all the variables the gross profits sheet would need
 
     private String mAmountGrossProfit;
 
@@ -26,21 +27,13 @@ public class GrossProfit {
     private  String month;
 
 
-
-
-
-
     public String getmAmountGrossProfit() {
         return mAmountGrossProfit;
     }
 
     public void setmAmountGrossProfit(String mAmount) {
-        this.mAmountGrossProfit = mAmount;
+        this.mAmountGrossProfit = mAmount + " $";
     }
-
-
-
-
 
 
     public GrossProfit()

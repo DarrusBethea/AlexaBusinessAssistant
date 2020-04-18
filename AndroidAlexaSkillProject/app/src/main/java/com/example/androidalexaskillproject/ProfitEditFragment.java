@@ -49,8 +49,6 @@ public class ProfitEditFragment extends Fragment {
         OldAmount = getActivity().getIntent().getStringExtra("edit_amount");
         OldLastName = getActivity().getIntent().getStringExtra("edit_last_name");
         OldDate = getActivity().getIntent().getStringExtra("edit_date");
-
-
     }
 
 

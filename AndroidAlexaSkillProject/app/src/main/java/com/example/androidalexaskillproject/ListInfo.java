@@ -64,7 +64,7 @@ public static  int counter = 0;
 
     }
 
-
+    // FAH 4/17/2020: this method gets the sheets data and then pushes it to a list.
     public static class GetData extends AsyncTask<String, Void, String> {
 
         @Override
