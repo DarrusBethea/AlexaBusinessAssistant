@@ -13,5 +13,6 @@
     <string name="column2_text">Last Name/ Type</string>
     <string name="column3_text">Amount</string>
     <string name="column4_text">Date</string>
+    <string name="titleBar_text">Title</string>
     <string name="test_text">test</string>
 </resources>

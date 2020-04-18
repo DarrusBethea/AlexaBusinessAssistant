@@ -37,8 +37,7 @@ var NoKey = 0;
 app.setHandler({
     LAUNCH() {
       
-     // this.ask("Welcome, please ask what you would like to know about your current business, from your data sheets");
-     this.ask("Welcome");
+     this.ask("Welcome, please ask what you would like to know about your current business, from your data sheets");
     },
 
     //FAH 3/25/2020: fall back intent used if error occurs so alexa does not crash out
@@ -467,9 +466,6 @@ async function getInventoryTotal( foodname ) {
     
 }
 
-// who gave use the most money
-// what was most are money spent on
-//
 
 //FAH 3/25/2020: searchers through the ezpense type  in exepnses sheet and tells you the total amount of money spent on expense type
 async function getSerachExpensetype( Expenstype) {

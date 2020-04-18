@@ -1018,6 +1018,7 @@ drawable ic_list
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_settings
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1058,6 +1059,7 @@ id SYM
 id ScatterPlot_spinner
 id Scatter_Plot
 id Scatter_Plot_object
+id Signin_opition
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1090,6 +1092,8 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
+id cardConstraint
+id cardView
 id center
 id center_horizontal
 id center_vertical
@@ -1161,6 +1165,7 @@ id listMode
 id list_item
 id list_profit_date
 id list_profits_lastname
+id loginButton
 id masked
 id message
 id middle
@@ -1182,6 +1187,7 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
+id passWord
 id percent
 id pie_chart_expsnes
 id pie_chart_object
@@ -1235,6 +1241,7 @@ id search_plate
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
+id select_settings
 id select_stats
 id selected
 id shortcut
@@ -1274,6 +1281,7 @@ id textinput_helper_text
 id time
 id title
 id titleDividerNoCustom
+id title_bar
 id title_template
 id top
 id topPanel
@@ -1287,6 +1295,9 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userName
+id view_bottomBorder
+id view_bottomBorder2
 id view_offset_helper
 id visible
 id withText
@@ -1363,6 +1374,7 @@ layout grossprofit_mainlist_fragment
 layout home_screen
 layout linechart_fragment
 layout list_view_items
+layout login_screen
 layout main_list_fragment
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1441,6 +1453,7 @@ string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
 string test_text
+string titleBar_text
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
