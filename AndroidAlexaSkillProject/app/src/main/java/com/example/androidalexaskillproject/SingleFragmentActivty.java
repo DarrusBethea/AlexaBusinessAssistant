@@ -122,7 +122,7 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
                 Intent LineChartItent = new Intent(this, LineChartReturnFragment.class);
                 startActivity(LineChartItent);
 
-
+                //  Darrus Bethea
             case R.id.Signin_opition:
                 Intent SigninIntent = new Intent(this, LoginScreenReturnFragment.class);
                 startActivity(SigninIntent);

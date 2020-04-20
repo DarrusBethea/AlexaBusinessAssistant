@@ -1,7 +1,4 @@
-#Tue Apr 14 20:00:41 EDT 2020
-base.0=C\:\\Users\\fran\\Desktop\\darrus\\AlexaBusinessAssistant-Darrus\\AndroidAlexaSkillProject\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
-path.1=classes.dex
-renamed.1=classes2.dex
+#Mon Apr 20 09:36:52 EDT 2020
+base.0=C\:\\Users\\Darrus\\Desktop\\School\\CLASS\\SP\\GitHub\\AlexaBusinessAssistant\\AndroidAlexaSkillProject\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\Darrus\\Desktop\\School\\CLASS\\SP\\GitHub\\AlexaBusinessAssistant\\AndroidAlexaSkillProject\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
