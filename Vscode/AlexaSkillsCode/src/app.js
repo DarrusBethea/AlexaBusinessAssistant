@@ -458,7 +458,7 @@ async function getInventoryTotal( foodname ) {
 	
     }
 
-    if(total = 0){
+    if(total == 0){
 	return "We do not have any " + foodname;
     } else {
 	return "We have " + total + " " + foodname + " left.";    
