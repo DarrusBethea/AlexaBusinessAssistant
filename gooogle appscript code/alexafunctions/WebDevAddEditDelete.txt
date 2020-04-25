@@ -1,0 +1,185 @@
+// FAH 4/17/2020: this class is what we use in the android studio to be able to 
+// add/ delete/ edit new items into any list we choose to.
+
+// FAH 2/16/2020: every google app script function needs doget to get parameters
+function doGet(e){
+  
+  var profitsheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("profits");
+  var data = profitsheet.getDataRange().getValues();
+  var UrlParamData = " ";
+  var sheetname= "";
+  var AddDelete ="";
+  var Firstname = "";
+  var Lastname = "";
+  var profit = "";
+  var DateInfo = "";
+  
+  var EditFirstname = "";
+  var EditLastname = "";
+  var Editprofit = "";
+  var EditDateInfo = "";
+  
+  if (e != null){
+    // FAH 2/15/2020: getting the url data and putting it in a var
+    UrlParamData = JSON.stringify(e);
+    Logger.log(UrlParamData);
+   //Logger.log(e);
+    //FAH 2/15/2020: getting the url data and pushing to there own strings
+    for (var i =0; i<UrlParamData.length; i++){
+     
+      if (UrlParamData.match(/\w+|"[^"]+"/g)[i] == '"sheetname"'){
+          /* FAH 2/15/2020: when a url is enter we are looking for
+          the name profits to be this spefic place*/
+          sheetname = UrlParamData.match(/\w+|"[^"]+"/g)[i+1];
+          //FAH 2/15/2020: replaceing the quotes in the string with blanks 
+          sheetname = sheetname.toString().replace(/\"+/g, "");
+      }
+      
+      if (UrlParamData.match(/\w+|"[^"]+"/g)[i] == '"AddDelete"'){
+        
+        AddDelete = UrlParamData.match(/\w+|"[^"]+"/g)[i+1];
+        AddDelete = AddDelete.toString().replace(/\"+/g, "");
+        Logger.log(AddDelete);
+      }
+      
+      
+      if (UrlParamData.match(/\w+|"[^"]+"/g)[i] == '"Firstname"'){
+        Firstname = UrlParamData.match(/\w+|"[^"]+"/g)[i+1];
+        Firstname = Firstname.toString().replace(/\"+/g, "");
+        Logger.log(Firstname);
+      }
+      
+      if (UrlParamData.match(/\w+|"[^"]+"/g)[i] == '"LastName"'){
+        //Logger.log(name);
+        Lastname = UrlParamData.match(/\w+|"[^"]+"/g)[i+1];
+        Lastname = Lastname.toString().replace(/\"+/g, "");
+        Logger.log(Lastname);
+      }
+      
+      if (UrlParamData.match(/\w+|"[^"]+"/g)[i] == '"profit"'){
+        
+        profit = UrlParamData.match(/\w+|"[^"]+"/g)[i+1];
+        profit = profit.toString().replace(/\"+/g, "");
+        Logger.log(profit);
+      }
+      
+      if (UrlParamData.match(/\w+|"[^"]+"/g)[i] == '"Date"'){
+        
+        DateInfo = UrlParamData.match(/\w+|"[^"]+"/g)[i+1];
+        DateInfo = DateInfo.toString().replace(/\"+/g, "");
+        Logger.log(DateInfo);
+      }
+      
+      if (UrlParamData.match(/\w+|"[^"]+"/g)[i] == '"EditFirstName"'){
+        
+        EditFirstname = UrlParamData.match(/\w+|"[^"]+"/g)[i+1];
+        EditFirstname = EditFirstname.toString().replace(/\"+/g, "");
+        Logger.log(EditFirstname);
+      }
+        
+        if (UrlParamData.match(/\w+|"[^"]+"/g)[i] == '"EditLastName"'){
+        
+        EditLastname = UrlParamData.match(/\w+|"[^"]+"/g)[i+1];
+        EditLastname = EditLastname.toString().replace(/\"+/g, "");
+        Logger.log(EditLastname);
+      }
+      
+          if (UrlParamData.match(/\w+|"[^"]+"/g)[i] == '"EditProfit"'){
+        
+        Editprofit = UrlParamData.match(/\w+|"[^"]+"/g)[i+1];
+        Editprofit = Editprofit.toString().replace(/\"+/g, "");
+        Logger.log(Editprofit);
+      }
+      
+          if (UrlParamData.match(/\w+|"[^"]+"/g)[i] == '"EditDate"'){
+        
+        EditDateInfo = UrlParamData.match(/\w+|"[^"]+"/g)[i+1];
+        EditDateInfo = EditDateInfo.toString().replace(/\"+/g, "");
+        Logger.log(EditDateInfo);
+      }
+      
+        
+    }
+      
+    if (sheetname == "profits"){
+      
+      if (AddDelete == "add"){
+    
+        profitsheet.getRange(data.length +1,1).activate().setValue(Firstname);
+        profitsheet.getRange(data.length +1,2).activate().setValue(Lastname);
+        profitsheet.getRange(data.length +1,3).activate().setValue(profit);
+        profitsheet.getRange(data.length +1,4).activate().setValue(DateInfo);
+      }
+      
+      else if (AddDelete == "delete"){
+        Logger.log("hello");
+        for (var i = 1; i < data.length; i++) {
+            if (data[i][0] == Firstname && data[i][1] == Lastname
+               && data[i][2] == profit){
+                  profitsheet.deleteRow(i+1);
+           
+            
+          }
+  
+                  
+
+        }
+      
+      
+      }
+      //FAH 3/1/2020: basically if the user leaves it blank
+      //in android app it will just leave the old value.
+      else if(AddDelete == "edit"){
+      
+        if (EditFirstname == "null"){
+          
+            EditFirstname = Firstname;
+        
+        }
+        
+        
+         if (EditLastname == "null"){
+           EditLastname = Lastname;
+        
+        }
+        
+        
+         if (Editprofit == "null"){
+           Editprofit = profit
+        
+        }
+        
+        
+         if (EditDateInfo == "null"){
+           
+           EditDateInfo = DateInfo;
+        
+        }
+        
+        // FAH3/1/2020: delete the row we want to edit then 
+        // add in a new row with updated data
+        for (var i = 1; i < data.length; i++) {
+            if (data[i][0] == Firstname && data[i][1] == Lastname
+               && data[i][2] == profit){
+                  profitsheet.deleteRow(i+1);
+            
+          }
+        }
+            
+        profitsheet.getRange(data.length,1).activate().setValue(EditFirstname);
+        profitsheet.getRange(data.length,2).activate().setValue(EditLastname);
+        profitsheet.getRange(data.length,3).activate().setValue(Editprofit);
+        profitsheet.getRange(data.length,4).activate().setValue(EditDateInfo);
+        
+        
+      }
+      
+    }
+    
+  }
+  Totalprofits();
+  
+  return HtmlService.createHtmlOutputFromFile("TitlePage")
+   
+}
+

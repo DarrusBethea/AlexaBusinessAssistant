@@ -29,6 +29,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+
+// Mayank 4/19/2020: BarChartFragment class stores all the Bar chart data
+
 public class BarChartFragment extends Fragment {
     Spinner myspinner;
     BarChart barChart;

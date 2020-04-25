@@ -130,6 +130,7 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
 
                 return true;
 
+            //  Darrus Bethea
             case R.id.Signin_opition:
                 Intent SigninIntent = new Intent(this, LoginScreenReturnFragment.class);
                 startActivity(SigninIntent);

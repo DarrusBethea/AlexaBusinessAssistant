@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script>
+      function onSuccess(getInfo) {
+        var div = document.getElementById('output');
+        div.innerHTML = getInfo;
+      }
+
+      google.script.run.withSuccessHandler(onSuccess)
+          .getSheetInfo();
+    </script>
+  </head>
+  <body>
+    <div id="output">No result yet...</div>
+  </body>
+</html>

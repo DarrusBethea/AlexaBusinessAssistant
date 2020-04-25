@@ -1,0 +1,129 @@
+
+// intents and utterances 
+
+TotalProfitsIntent{
+what are my total profits
+what were my total profits 
+}
+
+getQuarterOneIntent{
+what is quarter ones total profits
+what was quarter ones total profits
+}
+
+getQuarterTwoIntent{
+what is quarter twos total profits
+what was quarter twos total profits
+}
+
+getQuarterThreeIntent{
+what is quarter threes total profits
+what was quarter threes total profits
+}
+
+getQuarterFourIntent{
+what was quarter fours total profits
+what is quarter four total profits
+}
+
+HoursWorkedIntent{
+how many hours did {person} work
+}
+
+InventoryTotalIntent{
+what is our {food} stock looking like
+how much {food} is left
+get total {food}
+}
+
+MothlyProfitsIntent{
+what was this {months} profit
+what was this {months} total profit
+what was {months} total profit
+what was {months} profit
+}
+
+MothlyExpensesIntent{
+what was {months} expense
+what was this {months} total expenses
+what was this {months} expense
+what was {months} total expenses
+}
+
+MothlyTotalIntent{
+what was {months} gross profit
+what was {months} total gross profit
+what was this {months} total gross profit
+what was this {months} gross profit
+}
+
+ProfitNameSearchIntent{
+What was the total amount that {firstname} {lastname} sent me
+}
+
+YesIntent{
+yes
+}
+
+NoIntent{
+no
+}
+
+
+quarterOneExpensesIntent{
+quarter one expenses
+what are the expenses for quarter one
+how much did we spend in the first quarter
+}
+
+quarterTwoExpensesIntent{
+quarter two expenses
+what are the expenses for quarter two
+how much did we spend in the second quarter
+}
+
+quarterThreeExpensesIntent{
+quarter three expenses
+what are the expenses for quarter three
+how much did we spend in the third quarter
+}
+
+quarterFourExpensesIntent{
+what are the expenses for quarter four
+how much did we spend in the fourth quarter
+}
+
+ExpenseTypeIntent{
+
+How much money was spent on {expensetyperesponse} supplies
+How much money was spent on {expensetyperesponse}
+}
+
+ProfitPersonMostIntent{
+who gave me the most profits.
+which customer gave me the most profits.
+who gave me the most profits this year
+which customer gave me the most profits this year.
+}
+
+ProfitPersonLessIntent{
+who gave me the least profits.
+which customer gave me the least profits.
+who gave me the least profits this year.
+which customer gave me the least profits this year.
+}
+
+TotalGrossProfitIntent{
+what was my total gross profit
+what was my total gross profit this year
+what was my gross 
+what was my gross profit this year
+}
+
+TotalExpensesIntent{
+what are my expenses this year
+what are my expenses
+what are my total expenses this year
+what are my total expenses
+}
+

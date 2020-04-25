@@ -1,0 +1,388 @@
+
+//Fah 3/7/2020 gets the total number for profits sheet then puts 
+// the response in the response sheet
+function Totalprofits(){
+var runningtotal = 0;
+var profitsheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("profits");
+var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+if (profitsheet != null) {
+
+var data = profitsheet.getDataRange().getValues();
+
+for (var i = 1; i < data.length; i++) {
+
+runningtotal= parseInt(runningtotal)+data[i][2];
+
+}
+
+ return responsesheet.getRange("B5").setValue("your total profit is "+runningtotal+ " dollars");
+}
+}
+
+
+
+
+//AD 4/3/2020
+function TotalHoursWorked(){
+  var runningtotal = 0;
+  var employeesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("employees");
+  var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+  if (employeesheet != null) {
+    var data = employeesheet.getDataRange().getValues();
+    
+    for (var i = 1; i < data.length; i++){
+      runningtotal = parseInt(runningtotal)+data[i][2];
+    }
+    
+    return responsesheet.getRange("B7").setValue("Total employees hours worked is " + runningtotal + " hours");
+    
+  }
+  
+}
+
+//AD 4/3/2020
+function TotalInventoryUnits(){
+  var runningtotal = 0;
+  var inventorysheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("inventory");
+  var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+  if (inventorysheet != null) {
+    var data = inventorysheet.getDataRange().getValues();
+    
+    for (var i = 1; i < data.length; i++){
+      runningtotal = parseInt(runningtotal)+data[i][2];
+    }
+    
+    return responsesheet.getRange("B8").setValue("Total inventory units is " + runningtotal + " units");
+    
+  }
+  
+}
+
+//William Geary 03/07/2020
+function getQuarterOne(){
+
+  var Q2 = 0;
+  var profits = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("profits");
+  var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+  var Date1 = new Date("2020-01-02");
+  var Date2 = new Date("2020-04-02");
+  
+  
+  if (profits != null) {
+   Logger.log(Date1);
+    Logger.log(Date2);
+   var data = profits.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+
+    if (data[i][3] > Date1 && data[i][3] < Date2){
+      Q2 = parseInt(Q2) + data[i][2];
+   
+    }
+}
+
+ return responsesheet.getRange("B9").setValue("The total for quarter one is " + Q2 + " dollars");
+}
+}
+
+//William Geary 03/07/2020
+function getQuarterTwo(){
+
+  var Q3 = 0;
+  var profits = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("profits");
+  var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+  var Date1 = new Date("2020-04-02");
+  var Date2 = new Date("2020-07-02");
+  
+  
+  if (profits != null) {
+   Logger.log(Date1);
+    Logger.log(Date2);
+   var data = profits.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+
+    if (data[i][3] > Date1 && data[i][3] < Date2){
+      Q3 = parseInt(Q3) + data[i][2];
+   
+    }
+}
+
+ return responsesheet.getRange("B10").setValue("The total for quarter two is " + Q3 + " dollars");
+}
+}
+
+//William Geary 03/07/2020
+function getQuarterThree(){
+
+  var Q4 = 0;
+  var profits = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("profits");
+  var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+  var Date1 = new Date("2020-07-02");
+  var Date2 = new Date("2020-10-02");
+  
+  
+  if (profits != null) {
+   Logger.log(Date1);
+    Logger.log(Date2);
+   var data = profits.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+
+    if (data[i][3] > Date1 && data[i][3] < Date2){
+      Q4 = parseInt(Q4) + data[i][2];
+   
+    }
+}
+
+ return responsesheet.getRange("B11").setValue("The total for quarter three is " + Q4 + " dollars");
+}
+}
+
+//William Geary 03/07/2020
+function getQuarterFour(){
+
+  var Q5 = 0;
+  var profits = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("profits");
+  var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+  var Date1 = new Date("2020-10-01");
+  
+  
+  if (profits != null) {
+   Logger.log(Date1);
+   var data = profits.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+
+    if (data[i][3] > Date1){
+      Q5 = parseInt(Q5) + data[i][2];
+   
+    }
+}
+
+ return responsesheet.getRange("B12").setValue("The total for quarter four is " + Q5 + " dollars");
+}
+}
+
+//William Geary 04/06/2020
+function quarterOneExpenses(){
+
+  var Q1 = 0;
+  var expenses = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("expenses");
+  var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+  var Date1 = new Date("2020-01-02");
+  var Date2 = new Date("2020-03-02");
+  
+   
+  if (expenses != null) {
+   Logger.log(Date1);
+    Logger.log(Date2);
+   var data = expenses.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+
+    if (data[i][3] > Date1 && data[i][3] < Date2){
+      Q1 = parseInt(Q1) + data[i][2];
+   
+    }
+}
+
+ return responsesheet.getRange("B13").setValue("The total expenses for quarter one are " + Q1 + " dollars");
+}
+}
+
+//William Geary 04/06/2020
+function quarterTwoExpenses(){
+
+  var Q1 = 0;
+  var expenses = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("expenses");
+  var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+  var Date1 = new Date("2020-04-02");
+  var Date2 = new Date("2020-06-02");
+  
+   
+  if (expenses != null) {
+   Logger.log(Date1);
+    Logger.log(Date2);
+   var data = expenses.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+
+    if (data[i][3] > Date1 && data[i][3] < Date2){
+      Q1 = parseInt(Q1) + data[i][2];
+   
+    }
+}
+
+ return responsesheet.getRange("B14").setValue("The total expenses for quarter two are " + Q1 + " dollars");
+}
+}
+
+//William Geary 04/06/2020
+function quarterThreeExpenses(){
+
+  var Q1 = 0;
+  var expenses = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("expenses");
+  var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+  var Date1 = new Date("2020-07-02");
+  var Date2 = new Date("2020-09-02");
+  
+   
+  if (expenses != null) {
+   Logger.log(Date1);
+    Logger.log(Date2);
+   var data = expenses.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+
+    if (data[i][3] > Date1 && data[i][3] < Date2){
+      Q1 = parseInt(Q1) + data[i][2];
+   
+    }
+}
+
+ return responsesheet.getRange("B15").setValue("The total expenses for quarter three are " + Q1 + " dollars");
+}
+}
+
+//William Geary 04/06/2020
+function quarterFourExpenses(){
+
+  var Q1 = 0;
+  var expenses = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("expenses");
+  var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+  var Date1 = new Date("2020-10-01");
+
+  
+   
+  if (expenses != null) {
+ 
+   var data = expenses.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+
+    if (data[i][3] > Date1){
+      Q1 = parseInt(Q1) + data[i][2];
+   
+    }
+}
+
+ return responsesheet.getRange("B16").setValue("The total expenses for quarter four are " + Q1 + " dollars");
+}
+}
+
+//FAH 4/10/2020: updates total stock by how much is in stock and unit price.
+function UpdateInventorybyStock(){
+  
+  var InventoryUpdate = 0;
+  var inventorysheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("inventory");
+  
+  if (inventorysheet != null) {
+    var data = inventorysheet.getDataRange().getValues();
+
+    for (var i = 1; i < data.length; i++){
+      InventoryUpdate = (data[i][1] * data[i][2]);
+      inventorysheet.getRange("D" + (i+1)).setValue(InventoryUpdate);
+     
+    }
+    
+  }
+
+}
+
+
+//Will 3/7/2020 getting Total expenses for alexa response
+function Totalexpenses(){
+var runningtotal = 0;
+var ExpenseSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("expenses");
+var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+if (ExpenseSheet != null) {
+
+var data = ExpenseSheet.getDataRange().getValues();
+
+for (var i = 1; i < data.length; i++) {
+
+runningtotal= parseInt(runningtotal)+data[i][2];
+
+}
+  
+  runningtotal = (runningtotal * -2) + runningtotal ;
+
+ return responsesheet.getRange("B17").setValue("your total expenses for the year are "+runningtotal+ " dollars");
+}
+}
+
+//Will 3/7/2020 getting Total Gross profit for alexa response
+function Totalgrossprofit(){
+var profittotal = 0;
+var expensestotal = 0;
+var grossProfit = 0;
+var profitsheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("profits");
+var ExpenseSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("expenses");
+var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+if (profitsheet != null) {
+
+var profitdata = profitsheet.getDataRange().getValues();
+var expensestdata = ExpenseSheet.getDataRange().getValues();
+
+for (var i = 1; i < profitdata.length; i++) {
+
+profittotal= parseInt(profittotal)+profitdata[i][2];
+
+}
+  
+for (var i = 1; i < expensestdata.length; i++) {
+
+expensestotal= parseInt(expensestotal)+expensestdata[i][2];
+
+}
+  
+  grossProfit = profittotal + expensestotal;
+  
+  if (grossProfit < 0 ){
+    
+    grossProfit = (grossProfit * -1);
+   return responsesheet.getRange("B18").setValue("your total gross profit for the year is negative "+grossProfit+ " dollars");
+  }
+  
+  else {
+  
+     return responsesheet.getRange("B18").setValue("your total gross profit for the year is "+grossProfit+ " dollars");
+  }
+
+
+}
+}
+
+//Will 3/7/2020 getting which cutomer spent the most money and less money for alexa 
+function SpentTheMostMoney(){
+var PositionGreater = 0;
+var PositionLess = 0;
+var ProfitSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("profits");
+var responsesheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("responses");
+if (ProfitSheet != null) {
+
+var data = ProfitSheet.getDataRange().getValues();
+  
+var MoneyGreater = data[1][2];
+var MoneyLess = data[1][2];
+
+for (var i = 1; i < data.length; i++) {
+  
+ 
+  
+  
+  if (MoneyGreater <= data[i][2]){
+  MoneyGreater = data[i][2];
+  PositionGreater = i;
+}
+  if (MoneyLess >= data[i][2]){
+  MoneyLess = data[i][2];
+  PositionLess = i;
+  }
+  
+}
+  
+  
+  var two = responsesheet.getRange("B19").setValue("The person that gave you the most money was, " + data[PositionGreater][0].toString() + " "+ data[PositionGreater][1].toString());
+  var three =  responsesheet.getRange("B20").setValue("The person that gave you the smallest amount of money was, " + data[PositionLess][0].toString()+ " " + data[PositionLess][1].toString());
+
+  var results = [two,three];
+
+  return results;
+
+}
+}
+

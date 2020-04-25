@@ -3,9 +3,6 @@ package com.example.androidalexaskillproject;
 
 /*  M. Marinaro 3/9/20
     Singleton Repository for all sheets and sheet information
-    For now just hold all variables used elsewhere for the many sheets we can access
-    TODO this should entirely house the current sheet, using a list of column names and proceeding rows?
-    TODO Find out if that would work
  */
 
 public class SheetRepository {
@@ -15,9 +12,8 @@ public class SheetRepository {
     private final String SHEET_CODE_URL = "https://script.google.com/macros/s/AKfycbxKx3h5nkb6LF840GZhNeFJNjWZVP08Lm4HiqUWcmYSdMoZDjU/exec"; //Url for GoogleScript code to call for functions
     private final String SHEET_URL = "1KE91K1eYxlfSV9gHfI1LBNaCtAS_c-o8rTF92NlEWvg"; //Url of sheet to edit
 
-    //Individual sheet info
+    //Individual sheet variables
     private String sheetName;
-
     private String column_1;    //M.Marinaro 3/0/20 : columns named here will be called as necessary elsewhere to modify strings based on the currently selected sheet
     private String column_2;    //                      These are just the text names of the columns, NOT the variable names on the sheets
     private String column_3;
@@ -38,7 +34,7 @@ public class SheetRepository {
         return repository;
     }
 
-    //M.Marinaro 3/0/20 : Getter methods. Avoiding use of set methods to keep everything in this class for now
+    //M.Marinaro 3/0/20 : Getter methods.
     public String getSheetUrl(){
         return SHEET_URL;
     }
@@ -72,8 +68,6 @@ public class SheetRepository {
     }
 
 
-
-    //TODO These set methods should be turned into arraylists stored in a list within the repository
     //methods to switch between sheets
     public void setSheetProfits() {
         sheetName = "profits";
@@ -111,13 +105,4 @@ public class SheetRepository {
         units = " ";
     }
 
-
-//M.Marinaro 3/9/20 : the lack of a date as the fourth column restricts this from working
-//    public void setSheetInventory() {
-//        sheetName = "Inventory";
-//        column_1 ="Name";
-//        column_2 ="Quantity";
-//        column_3 ="Unit Price";
-//        column_4 ="Total Cost";
-//    }
 }

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Darrus Bethea -->
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -33,7 +34,7 @@
         app:fontFamily="@font/muli" />
 
     <EditText
-        android:id="@+id/userName"
+        android:id="@+id/passWord"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -44,11 +45,11 @@
         android:layout_marginTop="318dp"
         android:layout_marginRight="70dp"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Password"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/passWord"
+        android:id="@+id/userName"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -59,7 +60,7 @@
         android:layout_marginRight="70dp"
         android:layout_marginBottom="293dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="UserName"
         android:inputType="textPassword" />
 
     <Button

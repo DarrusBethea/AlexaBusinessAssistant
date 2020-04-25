@@ -1,0 +1,39 @@
+//Slot types
+//example
+// slotname{
+// slot value, 'key for alexa when user speaks'
+//}
+
+expensetype{
+Produce
+Auto
+Material
+}
+
+Inventory{
+item
+product
+inventory
+stock
+}
+
+person{
+used Amazon.actor
+}
+
+food {
+used Amazon.Food
+}
+
+months {
+
+used Amazon.months
+}
+
+firstname{
+used Amazon.US.First_Name
+}
+
+lastname {
+used Amazon.actor
+}

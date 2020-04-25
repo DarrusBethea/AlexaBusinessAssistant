@@ -32,6 +32,9 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.logging.ConsoleHandler;
 
+
+// Mayank 4/19/2020: ScatterPlotData class stores all the ScatterPlot chart data
+// which clacuates the data by monthy avgerage.
 public class ScatterPlotData extends Fragment{
 
     Spinner myspinner;

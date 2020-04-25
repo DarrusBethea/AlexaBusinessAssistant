@@ -79,7 +79,7 @@ public static  int counter = 0;
 
 
             try {
-                URL url = new URL(
+                URL url = new URL(                   ///M.Marinaro : URL modified based on coded url & sheet name
                         "https://script.google.com/macros/s/AKfycbzRJecRXqinxLQxHRix6F3JmjHso5NyxNgXABdWrDIhwjM4UvY/exec?id="+ SheetRepository.getInstance().getSheetUrl()+"&sheet=" + SheetRepository.getInstance().getSheetName());
                 urlConnection = (HttpURLConnection) url.openConnection();
 

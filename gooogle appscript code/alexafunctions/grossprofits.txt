@@ -1,0 +1,213 @@
+//Fah 3/22/2020
+function TotalGrossprofits(){
+var runningtotal = 0;
+var profitsheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("profits");
+var grossprofitSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("gross_profit");
+if (profitsheet != null) {
+
+var data = profitsheet.getDataRange().getValues();
+
+  for (var i = 1; i < data.length; i++) {
+
+       runningtotal= parseInt(runningtotal)+data[i][2];
+
+  }
+
+  return grossprofitSheet.getRange("B2").setValue(runningtotal);
+  }
+}
+
+//Fah 3/22/2020
+function TotalGrossExpenses(){
+var runningtotal = 0;
+var profitsheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("expenses");
+var grossExpensesSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("gross_profit");
+  if (profitsheet != null) {
+
+    var data = profitsheet.getDataRange().getValues();
+        for (var i = 1; i < data.length; i++) {
+
+             runningtotal= parseInt(runningtotal)+data[i][2];
+             Logger.log(runningtotal);
+        }
+
+    return grossExpensesSheet.getRange("C2").setValue(runningtotal);
+  }
+}
+
+//Fah 3/22/2020
+function TotalMonths(){
+  
+  var gross_profit_Sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("gross_profit");
+  var CalcMonths = 0;
+  var data = gross_profit_Sheet.getDataRange().getValues();
+  for (var i = 2; i < 15; i++) {
+    var CalcMonths = 0
+    CalcMonths = data[i-1][1] + data[i-1][2];
+    gross_profit_Sheet.getRange("D" + i).setValue(CalcMonths);
+    Logger.log(CalcMonths);
+    Logger.log(i);
+
+  }
+}
+
+//Fah 3/22/2020
+function getProfitsYearly(){
+  
+  var profits = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("profits");
+  var grossProfitsSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("gross_profit");
+
+  if (profits != null) {
+     var data = profits.getDataRange().getValues();
+   
+      for (var i = 1; i < 13; i++) {
+   
+           var CalcCureentYear = 0;
+             for (var j = 1; j < data.length; j++) {
+
+                if (data[j][3] >= ToStringGrossProfits(i) && data[j][3] < ToStringGrossProfits(i +1)
+                    && i < 9){
+       
+                      var CalcCureentYear = parseInt(CalcCureentYear) + data[j][2];
+                      Logger.log(CalcCureentYear);
+                }
+        
+                else if (i == 9){
+        
+                    if (data[j][3] >= ToStringGrossProfits(i) && data[j][3] <  new Date("2020-"+(i)+"-31")){
+              
+                        var CalcCureentYear = parseInt(CalcCureentYear) + data[j][2];
+                        Logger.log(CalcCureentYear);
+   
+                    }
+                }
+        
+                else if (i == 10){
+                    if (data[j][3] > new Date("2020-"+(i -1)+"-31") && data[j][3] <  new Date("2020-"+(i + 1)+"-01")){
+              
+                        var CalcCureentYear = parseInt(CalcCureentYear) + data[j][2];
+                        Logger.log(CalcCureentYear);
+   
+                    }
+                }
+        
+               else if (i == 11){
+          
+                   if (data[j][3] > new Date("2020-"+(i -1)+"-31") && data[j][3] <  new Date("2020-"+(i + 1)+"-01")){
+                        var CalcCureentYear = parseInt(CalcCureentYear) + data[j][2];
+                        Logger.log(CalcCureentYear);
+   
+                    }
+              }
+            
+               else if (i == 12){
+                  if (data[j][3] > ToStringGrossProfits(i)){
+                      var CalcCureentYear = parseInt(CalcCureentYear) + data[j][2];
+                      Logger.log(CalcCureentYear);
+            
+                  }
+               }
+        
+       
+            }
+         grossProfitsSheet.getRange("B" + (i + 2)).setValue(CalcCureentYear);
+        }
+    }
+  TotalMonths();
+}
+
+
+
+//Fah 3/22/2020
+function getExpensesYearly(){
+  
+  var profits = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("expenses");
+  var grossExpensesSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("gross_profit");
+
+  if (profits != null) {
+     var data = profits.getDataRange().getValues();
+   
+      for (var i = 1; i < 13; i++) {
+   
+           var CalcCureentYear = 0;
+             for (var j = 1; j < data.length; j++) {
+
+                if (data[j][3] >= ToStringGrossProfits(i) && data[j][3] < ToStringGrossProfits(i +1)
+                    && i < 9){
+       
+                      var CalcCureentYear = parseInt(CalcCureentYear) + data[j][2];
+                      Logger.log(CalcCureentYear);
+                }
+        
+                else if (i == 9){
+        
+                    if (data[j][3] >= ToStringGrossProfits(i) && data[j][3] <  new Date("2020-"+(i)+"-31")){
+              
+                        var CalcCureentYear = parseInt(CalcCureentYear) + data[j][2];
+                        Logger.log(CalcCureentYear);
+   
+                    }
+                }
+        
+                else if (i == 10){
+                    if (data[j][3] > new Date("2020-"+(i -1)+"-31") && data[j][3] <  new Date("2020-"+(i + 1)+"-01")){
+              
+                        var CalcCureentYear = parseInt(CalcCureentYear) + data[j][2];
+                        Logger.log(CalcCureentYear);
+   
+                    }
+                }
+        
+               else if (i == 11){
+          
+                   if (data[j][3] > new Date("2020-"+(i -1)+"-31") && data[j][3] <  new Date("2020-"+(i + 1)+"-01")){
+                        var CalcCureentYear = parseInt(CalcCureentYear) + data[j][2];
+                        Logger.log(CalcCureentYear);
+   
+                    }
+              }
+            
+               else if (i == 12){
+                  if (data[j][3] > ToStringGrossProfits(i)){
+                      var CalcCureentYear = parseInt(CalcCureentYear) + data[j][2];
+                      Logger.log(CalcCureentYear);
+            
+                  }
+               }
+        
+       
+            }
+         grossExpensesSheet.getRange("C" + (i + 2)).setValue(CalcCureentYear);
+        }
+    }
+    TotalMonths();
+}
+
+
+
+//Fah 3/22/2020
+function ToStringGrossProfits( month){
+ var Dec = new Date("2020-12-02");
+ var Oct = new Date("2020-10-02");
+ var Nov = new Date("2020-11-02");
+ var CurrentDate = new Date("2020-" + month + "-01");
+   if (month == 12){
+   return Dec;
+   }
+   
+   else if (month == 11){
+   
+   return Nov;
+   }
+   
+   else if (month == 10){
+   
+   return Oct;
+   }
+   
+   else {
+   
+  return CurrentDate;
+  }
+
+}

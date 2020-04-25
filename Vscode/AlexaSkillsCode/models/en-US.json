@@ -26,7 +26,136 @@
 					}
 				}
 			]
+		},
+
+		{
+			"name": "TotalIncomeIntent",
+			"phrases": [
+				"Whats the Total income in {year}",
+				"Total income in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+
+		{
+			"name": "TotalCOGSIntent",
+			"phrases": [
+				"Whats the Total COGS in {year}",
+				"COGS in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+
+		{
+			"name": "TotalGPIntent",
+			"phrases": [
+				"Whats the Total Gross Profit in {year}",
+				"Gross Profit in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+
+		{
+			"name": "TotalExpensesIntent",
+			"phrases": [
+				"Whats the Total Expenses in {year}",
+				"Expenses in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+
+		{
+			"name": "TotalOrdinaryIncomeIntent",
+			"phrases": [
+				"Whats the Ordinary Income in {year}",
+				"Ordinary Income in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+
+		{
+			"name": "TotalNetIncomeIntent",
+			"phrases": [
+				"Whats the Net income in {year}",
+				"Net income in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+
+		{
+			"name": "MonthlyCOGSIntent",
+			"phrases": [
+				"What was the COGS in {month} {year}",
+				"COGS in {month} {year}"
+			],
+			"inputs": [
+				{
+					"name": "month",
+					"type":{
+						"alexa": "AMAZON.Month"
+					}
+				},
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
 		}
+
+
+
+
 	],
 	"alexa": {
 		"interactionModel": {

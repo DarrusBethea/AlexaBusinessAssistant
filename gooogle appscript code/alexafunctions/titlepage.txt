@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+     <h1> Added to the database </h1>
+  </body>
+</html>
+
+
