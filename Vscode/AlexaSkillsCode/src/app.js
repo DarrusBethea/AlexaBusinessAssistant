@@ -13,6 +13,20 @@ const { GoogleSheetsCMS } = require('jovo-cms-googlesheets');
 const requestPromise = require('request-promise-native');
 
 const app = new App();
+//-------------------------
+//DICTIONARY
+//jake
+//-------------------------
+let dict = {
+    monthColumn : 0,
+    incomeColumn : 1,
+    cogsColumn : 2,
+    gpColumn : 3,
+    expensesColumn : 4,
+    oiColumn : 5,
+    netColumn : 6,
+    totalsRow : 13
+};
 
 app.use(
     new Alexa(),
@@ -21,6 +35,81 @@ app.use(
     new FileDb(),
     new GoogleSheetsCMS
 );
+
+/*
+jake(only works for pl sheet atm)
+Returns the sheet for a given year and type
+Type: either "pl" or "bs" (more in the future just need elseif)
+year: given year that corresponds to a sheet
+*/
+function getSheet(year, type){
+    var sheet;
+    if(type == "pl"){
+        switch(year){
+            case 2020:
+                sheet = app.$cms.pl_year20.slice();
+                break;
+            case 2019:
+                sheet = app.$cms.pl_year19.slice();
+                break;
+            //ADD MORE TO CREATE MORE YEARS
+            
+            default:
+                //FIND FIX FOR IF A UNSTORED SHEET YEAR IS GIVEN 
+                break;
+        }
+    }
+    return sheet;
+}
+
+/*
+jake
+Switch to return the int value for a given input Month
+month: month value returned from this.$inputs.month.value
+*/
+function getMonth(month){
+    var value;
+    switch(month){
+        case 'January': 
+            value = 1;
+            break;
+        case 'February': 
+            value = 2;
+            break;
+        case 'March': 
+            value = 3;
+            break;
+        case 'April': 
+            value = 4;
+            break;
+        case 'may': 
+            value = 5;
+            break;
+        case 'June': 
+            value = 6;
+            break;
+        case 'July': 
+            value = 7;
+            break;
+        //SOME OF THESE NEED TO BE lowercase ???????
+        case 'august': 
+            value = 8;
+            break;
+        case 'September': 
+            value = 9;
+            break;
+        case 'October': 
+            value = 10;
+            break;
+        case 'November': 
+            value = 11;
+            break;
+        case 'December': 
+            value = 12;
+            break;
+    }
+    return value;
+}
 
 
 // ------------------------------------------------------------------
@@ -307,6 +396,109 @@ app.setHandler({
 
         this.tell("GoodBye and have a great day")
      },
+
+    /*
+    jake
+    Returns Total income for a given pl Spreadsheet
+    input: year
+    response.Income:
+    */
+    TotalIncomeIntent(){
+        var year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "pl");
+        var income = getValue(sheet, 13, 1)
+        this.$speech.addT('response.Income',{income});
+        this.ask(this.$speech);
+    },
+
+    /*
+    jake
+    Returns Total COGS for a given pl spreadsheet
+    input: year
+    response.Cogs:
+    */
+    TotalCOGSIntent(){
+        var year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "pl");
+        var COGS = getValue(sheet, 13, 2)
+        this.$speech.addT('response.Cogs',{COGS});
+        this.ask(this.$speech);
+    },
+
+    /*
+    jake
+    Returns Gross Profit for a given year
+    slots: year
+    response.GrossProfit:
+    */
+    TotalGPIntent(){
+        var year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "pl");
+        var GP = getValue(sheet, 13, 3);
+        this.$speech.addT('response.GrossProfit',{GP});
+        this.ask(this.$speech);
+    },
+
+    /*
+    jake
+    Returns total expenses for a given year
+    input: year
+    response.Expenses:
+    */
+    TotalExpensesIntent(){
+        var year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "pl");
+        var expenses = getValue(sheet, 13, 4);
+        this.$speech.addT('response.Expenses',{expenses});
+        this.ask(this.$speech);
+    },
+
+    /*
+    jake
+    Returns total ordinary income for a given year
+    input: year
+    response.Ordinary:
+    */
+    TotalOrdinaryIncomeIntent(){
+        var year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "pl");
+        var ordinary = getValue(sheet, 13, 5);
+        this.$speech.addT('response.Ordinary',{ordinary});
+        this.ask(this.$speech);
+    },
+
+    /*
+    jake
+    Returns the total Net Income for a given year
+    input: year
+    response.netIncome:
+    */
+    TotalNetIncomeIntent(){
+        var year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "pl");
+        var net = getValue(sheet, 13, 6);
+        this.$speech.addT('response.netIncome',{net});
+        this.ask(this.$speech);
+    },
+
+    /*
+    jake
+    XXXXXXXXXX NEEDS FIXING in Alexa dev console XXXXXXXXXXXX
+    Returns a given cell in the spreadsheet for the income column based on month
+    input: year, month
+    response.MonthlyIncome: 
+    */
+   MonthlyIncomeIntent(){
+    var year = Number(this.$inputs.year.value);
+    var inputMonth = this.$inputs.month.value;
+    var month = Number(getMonth(inputMonth));
+    var sheet = getSheet(year, "pl");
+
+    var net = getValue(sheet, month, 1);
+
+    this.$speech.addT('response.MonthlyIncome', {inputMonth, year, net});
+    this.ask(this.$speech);
+},
 
 });
 
