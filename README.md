@@ -7,7 +7,7 @@ The android app lays out each sheet inside the app. Telling the user all the inf
 
 On the Alexa side, we used the Jovo framework to get info from the google sheets, this would then give us data to work with and let Alexa respond with that data.
 
-# File Secture of the project 
+# File structure of the project 
 
 # AlexaIntentsUtterances&Slots
 In the folder there are Two text files 
@@ -33,11 +33,11 @@ The next “grossprofits.txt" is a class to update the gross profits list
 
 The last one “titlepage.txt" was an html file that redirected the user when an item was edited, deleted, or added in a sheet.
 
-# The second folder jsonlib
+# The second folder "jsonlib"
 This folder contains a library that we used to turn are sheets into Json. 
 The library was created by GitHub user ronaldsmartin and can be found here https://gist.github.com/ronaldsmartin/47f5239ab1834c47088e
 
-# The third folder mikesfunction
+# The third folder "mikesfunction"
 the first file "titlepage.txt" was an html file that redirected the user when an item was edited deleted or added in a sheet.
 
 The second file "webdevScript.txt" is used for the rest of the sheets to add edit and delete data.
